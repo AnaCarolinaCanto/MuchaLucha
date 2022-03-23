@@ -2,17 +2,22 @@ programa
 {
 	inclua biblioteca Graficos --> g
 	inclua biblioteca Util	--> u
-		 	inteiro mutcha = g.carregar_imagem("mutcha.gif")
+		 	inteiro mutcha = g.carregar_imagem("mutcha.GIF")
 		 	cadeia resp 
 		 	inteiro num
 		 	caracter acss	
+		
+		 	
 	
 	funcao inicio()
 	{
 			logo()
 			acesso()
 			menu()
-			telas()	
+			tela_lucha()
+			tela_musc()
+			tela_fut()
+		
 			
 	}
 	funcao logo()
@@ -24,33 +29,34 @@ programa
 			escreva("  ██      ██  ██████   ██████ ██   ██ ██   ██     ███████  ██████   ██████ ██   ██ ██   ██ \n\n\n")    
 			escreva("\t\tBem-vindo! Gostaria de ter acesso aos nossos produtos? ")
 			leia(resp)  
+			
 		se(resp == "sim" ou resp == "Sim")
-		{	
+		{
 			g.iniciar_modo_grafico(verdadeiro)
 			g.definir_dimensoes_janela(480, 360)
-			g.desenhar_imagem(0,0, mutcha)
 			g.definir_titulo_janela("Loading...")
+			g.definir_quadro_gif(mutcha,62)
+			g.proximo_frame_gif(mutcha)
+			g.desenhar_imagem(0,0, mutcha)
 			g.renderizar()
 			escreva("\t\t ...Aguarde enquanto carregamos as informações...")
-			u.aguarde(2000)
-			g.fechar_janela()
-			
+			u.aguarde(3000)
+			g.encerrar_modo_grafico()
 		}
 		senao
 		{
-			limpa()
 			escreva("\t\t\tPoxa, que pena. :( \n\n\n\n\n")   
+			limpa()
 			logo()
 		}                                                                                                        
 	}
 	
 	funcao acesso()
-	{
-			limpa()
+	{		limpa()
 			cadeia nome
           	inteiro senha = 123
-          	escreva("Abaixo, digite seu login e senha\n")
-          	escreva("Digite seu nome de usuário: ")
+          	escreva("\nOpa... Legal!\n")
+          	escreva("Agora digite seu nome de usuário: ")
           	leia(nome)
           	escreva("Digite a sua senha: ")
           	leia(senha) 
@@ -75,7 +81,7 @@ programa
 			escreva("    █*************************** Sistema Mucha lucha **************************█\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════█\n")
 			escreva("    █   1 - LUCHA     |][|  2 - MUSCULAÇÃO  |][| 3 - FUTEBOL  |][|  CARRINHO   █\n")
-			escreva("    █                 |][|                  |][|              |][|             █\n")
+			escreva("    █                 |][|                  |][|              |][|    Vazio    █\n")
 			escreva("    █  Luva           |][| Cinturão         |][| Bola         |][|             █\n")
 			escreva("    █  Tatame         |][| Colchonete       |][| Camisa       |][|             █\n")
 			escreva("    █  Protetor Bucal |][| Corda            |][| Chuteira     |][|             █\n")
@@ -85,17 +91,27 @@ programa
 			escreva("    █══════════════════════════════════════════════════════════════════════════█\n")
 			escreva("    █***********************  PARA SAIR PRESSIONE => 0  ***********************█\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████\n\n\n")
+			escreva("\t\tPara avançar, escolha uma das categorias acima:  ")
 			leia(num)
 			limpa()
+		se(num == 1)
+			{
+				tela_lucha()
+			}
+		se(num == 2)
+			{
+				tela_musc()
+			}
+		se(num == 3)
+			{
+				tela_fut()
+			}
+		
+		
 	}		
-	funcao telas()
-	{
-			cadeia lucha[5] = {"1","2","3","4","5"}
-			escreva("Qual desses itens você se interessou? ")
-			leia(lucha)
-			escolha(num)
-		{	
-			caso 1: 
+			
+	funcao tela_lucha()
+		{
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n")
 			escreva("    █                                                                                                          █\n")
 			escreva("    █************************************************ LUCHA ***************************************************█\n")
@@ -108,8 +124,12 @@ programa
 			escreva("    █*************************************  PARA SAIR PRESSIONE => 0  *****************************************█\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
 			escreva("Digite um item: ")
+			leia(num)
 			limpa()
-			caso 2: 
+		}
+	funcao tela_musc()
+		{
+			
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n")
 			escreva("    █                                                                                                          █\n")
 			escreva("    █******************************************* MUSCULAÇÃO ***************************************************█\n")
@@ -123,27 +143,27 @@ programa
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
 			leia(num)
 			limpa()
-			caso 3:
+		}
+	funcao tela_fut()
+		{
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n")
 			escreva("    █                                                                                                          █\n")
 			escreva("    █******************************************* FUTEBOL ******************************************************█\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
-			escreva("    █  1 Bola         |][| 2 Camisa      |][| 3 Chuteira     |][| 4 Meião           |][|  5 Caneleira          █\n")
+			escreva("    █      1 Bola     |][|   2 Camisa    |][|   3 Chuteira   |][|      4 Meião      |][|     5 Caneleira       █\n")
 			escreva("    █                 |][|               |][|                |][|                   |][|                       █\n")
-			escreva("    █                 |][|               |][|                |][|                   |][|                       █\n")
-			escreva("    █     R$329,00    |][|   R$329,00    |][|    R$329,00    |][|     R$329,00      |][|      R$329,00        █\n")
+			escreva("    █     R$329,00    |][|   R$329,00    |][|    R$329,00    |][|      R$329,00     |][|      R$329,00         █\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
 			escreva("    █*************************************  PARA SAIR PRESSIONE => 0  *****************************************█\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
 			leia(num)
 			limpa()
-			caso 4:
 			menu()
-		} 
-	}	
+		}
+ 
+}	
 			
 	
-}
 
 
 
@@ -153,7 +173,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 7757; 
+ * @POSICAO-CURSOR = 2831; 
+ * @DOBRAMENTO-CODIGO = [22, 53];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
