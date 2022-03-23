@@ -13,12 +13,11 @@ programa
 	{
 			logo()
 			acesso()
-			menu()
+			tela_menu()
+			tela_not_found()
 			tela_lucha()
 			tela_musc()
 			tela_fut()
-		
-			
 	}
 	funcao logo()
 	{			
@@ -29,9 +28,8 @@ programa
 			escreva("  ██      ██  ██████   ██████ ██   ██ ██   ██     ███████  ██████   ██████ ██   ██ ██   ██ \n\n\n")    
 			escreva("\t\tBem-vindo! Gostaria de ter acesso aos nossos produtos? ")
 			leia(resp)  
-			
 		se(resp == "sim" ou resp == "Sim")
-		{
+	{
 			g.iniciar_modo_grafico(verdadeiro)
 			g.definir_dimensoes_janela(480, 360)
 			g.definir_titulo_janela("Loading...")
@@ -40,12 +38,15 @@ programa
 			g.desenhar_imagem(0,0, mutcha)
 			g.renderizar()
 			escreva("\t\t ...Aguarde enquanto carregamos as informações...")
-			u.aguarde(3000)
+			u.aguarde(1000)
 			g.encerrar_modo_grafico()
 		}
 		senao
 		{
-			escreva("\t\t\tPoxa, que pena. :( \n\n\n\n\n")   
+			limpa()
+			u.aguarde(0500)
+			escreva("\t\t\tPoxa, que pena. :( \n\n\n\n\n")
+			u.aguarde(1000)   
 			limpa()
 			logo()
 		}                                                                                                        
@@ -75,18 +76,31 @@ programa
 		  	Util.aguarde(1000)
        	 	limpa()
 	}
- 	funcao menu()
+ 	funcao tela_not_found()
+ 	{
+			escreva("		▓██▓███   ▄▄▄        ▄████ ▓█████     ███▄    █  ▒█████  ▄▄▄█████▓     █████▒▒█████   █    ██  ███▄    █ ▓█████▄  \n")  
+			escreva("		▓██░  ██▒▒████▄     ██▒ ▀█▒▓█   ▀     ██ ▀█   █ ▒██▒  ██▒▓  ██▒ ▓▒   ▓██   ▒▒██▒  ██▒ ██  ▓██▒ ██ ▀█   █ ▒██▀ ██▌ \n")
+			escreva("		▓██░ ██▓▒▒██  ▀█▄  ▒██░▄▄▄░▒███      ▓██  ▀█ ██▒▒██░  ██▒▒ ▓██░ ▒░   ▒████ ░▒██░  ██▒▓██  ▒██░▓██  ▀█ ██▒░██   █▌ \n")
+			escreva("		▒██▄█▓▒ ▒░██▄▄▄▄██ ░▓█  ██▓▒▓█  ▄    ▓██▒  ▐▌██▒▒██   ██░░ ▓██▓ ░    ░▓█▒  ░▒██   ██░▓▓█  ░██░▓██▒  ▐▌██▒░▓█▄   ▌ \n")   
+			escreva("		▒██▒ ░  ░ ▓█   ▓██▒░▒▓███▀▒░▒████▒   ▒██░   ▓██░░ ████▓▒░  ▒██▒ ░    ░▒█░   ░ ████▓▒░▒▒█████▓ ▒██░   ▓██░░▒████▓  \n")  
+			escreva("		▒▓▒░ ░  ░ ▒▒   ▓▒█░ ░▒   ▒ ░░ ▒░ ░   ░ ▒░   ▒ ▒ ░ ▒░▒░▒░   ▒ ░░       ▒ ░   ░ ▒░▒░▒░ ░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒  ▒▒▓  ▒  \n")  
+			escreva("		░▒ ░       ▒   ▒▒ ░  ░   ░  ░ ░  ░   ░ ░░   ░ ▒░  ░ ▒ ▒░     ░        ░       ░ ▒ ▒░ ░░▒░ ░ ░ ░ ░░   ░ ▒░ ░ ▒  ▒  \n")  
+			escreva("		░░         ░   ▒   ░ ░   ░    ░         ░   ░ ░ ░ ░ ░ ▒    ░          ░ ░   ░ ░ ░ ▒   ░░░ ░ ░    ░   ░ ░  ░ ░  ░  \n") 
+			escreva("	  	░░	      ░   ░     ░        ░         ░     ░ ░                     ░ ░     ░             ░    ░   ░        \n\n\n")
+ 	}
+ 	funcao tela_menu()
 	{
 			escreva("    ████████████████████████████████████████████████████████████████████████████\n")
-			escreva("    █*************************** Sistema Mucha lucha **************************█\n")
+			escreva("    █*************************  Sistema Mucha lucha  **************************█\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════█\n")
 			escreva("    █   1 - LUCHA     |][|  2 - MUSCULAÇÃO  |][| 3 - FUTEBOL  |][|  CARRINHO   █\n")
-			escreva("    █                 |][|                  |][|              |][|    Vazio    █\n")
-			escreva("    █  Luva           |][| Cinturão         |][| Bola         |][|             █\n")
-			escreva("    █  Tatame         |][| Colchonete       |][| Camisa       |][|             █\n")
-			escreva("    █  Protetor Bucal |][| Corda            |][| Chuteira     |][|             █\n")
-			escreva("    █  Saco de Boxe   |][| Kit de Halteres  |][| Meião        |][|             █\n")
-			escreva("    █  Bandagem       |][| Whey Protein     |][| Caneleira    |][|             █\n")
+			escreva("    █                 |][|                  |][|              |][|             █\n")
+			escreva("    █  Luva           |[]| Cinturão         |[]| Bola         |[]|   Vazio     █\n")
+			escreva("    █  Tatame         |[]| Colchonete       |[]| Camisa       |[]|   Vazio     █\n")
+			escreva("    █  Protetor Bucal |[]| Corda            |[]| Chuteira     |[]|   Vazio     █\n")
+			escreva("    █  Saco de Boxe   |[]| Kit de Halteres  |[]| Meião        |[]|   Vazio     █\n")
+			escreva("    █  Bandagem       |[]| Whey Protein     |[]| Caneleira    |[]|   Vazio     █\n")
+			escreva("    █_________________|][|__________________|[]|______________|][|_____________█\n")
 			escreva("    █                 |][|                  |][|              |][|             █\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════█\n")
 			escreva("    █***********************  PARA SAIR PRESSIONE => 0  ***********************█\n")
@@ -94,6 +108,10 @@ programa
 			escreva("\t\tPara avançar, escolha uma das categorias acima:  ")
 			leia(num)
 			limpa()
+		se(num == 0)
+			{
+				logo()
+			}
 		se(num == 1)
 			{
 				tela_lucha()
@@ -106,12 +124,17 @@ programa
 			{
 				tela_fut()
 			}
-		
-		
-	}		
-			
+		enquanto(num != 0 e num != 1 e num != 2 ou num !=3)
+			{
+				tela_not_found()
+				u.aguarde(2000)
+				limpa()
+				tela_menu()
+			}
+		}		
+	
 	funcao tela_lucha()
-		{
+	{
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n")
 			escreva("    █                                                                                                          █\n")
 			escreva("    █************************************************ LUCHA ***************************************************█\n")
@@ -119,17 +142,40 @@ programa
 			escreva("    █   1 Tatame      |][|   2  Luva     |][|  3 Bandagem    |][|  4  Saco de Boxe  |][|  5 Protetor Bucal     █\n")
 			escreva("    █                 |][|               |][|                |][|                   |][|                       █\n")
 			escreva("    █                 |][|               |][|                |][|                   |][|                       █\n")
-			escreva("    █        R$329,00 |][|   R$329,00    |][|    R$329,00    |][|      R$329,00     |][|       R$329,00        █\n")
+			escreva("    █   R$329,00      |][|   R$329,00    |][|    R$329,00    |][|      R$329,00     |][|       R$329,00        █\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
-			escreva("    █*************************************  PARA SAIR PRESSIONE => 0  *****************************************█\n")
+			escreva("    █*************************************  PARA VOLTAR AO MENU => 0  *****************************************█\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
-			escreva("Digite um item: ")
+			escreva("\t\t\t\tSe interessou nestes itens? \n\t\tDigite o respectivo número deste para adicionar em seu carrinho:  ")
 			leia(num)
 			limpa()
-		}
+		se(num == 0)
+			{
+				tela_menu()
+			}
+		se(num == 1)
+			{
+				tela_lucha()
+			}
+		se(num == 2)
+			{
+				tela_musc()
+			}
+		se(num == 3)
+			{
+				tela_fut()
+			}
+		enquanto(num != 0 e num != 1 e num != 2 ou num !=3)
+			{
+				
+				tela_not_found()
+				u.aguarde(2000)
+				limpa()
+				tela_menu()
+			}
+	}
 	funcao tela_musc()
-		{
-			
+	{
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n")
 			escreva("    █                                                                                                          █\n")
 			escreva("    █******************************************* MUSCULAÇÃO ***************************************************█\n")
@@ -139,13 +185,37 @@ programa
 			escreva("    █                 |][|               |][|                |][|                   |][|                       █\n")
 			escreva("    █    R$329,00     |][|   R$329,00    |][|    R$329,00    |][|     R$329,00      |][|       R$329,00        █\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
-			escreva("    █*************************************  PARA SAIR PRESSIONE => 0  *****************************************█\n")
+			escreva("    █*************************************  PARA VOLTAR AO MENU => 0  *****************************************█\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
+			escreva("\t\t\t\tSe interessou nestes itens? \n\t\tDigite o respectivo número deste para adicionar em seu carrinho:  ")
 			leia(num)
 			limpa()
-		}
+		se(num == 0)
+			{
+				tela_menu()
+			}
+		se(num == 1)
+			{
+				tela_lucha()
+			}
+		se(num == 2)
+			{
+				tela_musc()
+			}
+		se(num == 3)
+			{
+				tela_fut()
+			}
+		enquanto(num != 0 e num != 1 e num != 2 ou num !=3)
+			{
+				tela_not_found()
+				u.aguarde(2000)
+				limpa()
+				tela_menu()
+			}
+	}
 	funcao tela_fut()
-		{
+	{
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n")
 			escreva("    █                                                                                                          █\n")
 			escreva("    █******************************************* FUTEBOL ******************************************************█\n")
@@ -154,12 +224,36 @@ programa
 			escreva("    █                 |][|               |][|                |][|                   |][|                       █\n")
 			escreva("    █     R$329,00    |][|   R$329,00    |][|    R$329,00    |][|      R$329,00     |][|      R$329,00         █\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
-			escreva("    █*************************************  PARA SAIR PRESSIONE => 0  *****************************************█\n")
+			escreva("    █*************************************  PARA VOLTAR AO MENU => 0  *****************************************█\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
+			escreva("\t\t\t\tSe interessou nestes itens? \n\t\tDigite o respectivo número deste para adicionar em seu carrinho:  ")
 			leia(num)
 			limpa()
-			menu()
-		}
+		se(num == 0)
+			{
+				tela_menu()
+			}
+		se(num == 1)
+			{
+				tela_lucha()
+			}
+		se(num == 2)
+			{
+				tela_musc()
+			}
+		se(num == 3)
+			{
+				tela_fut()
+			}
+		enquanto(num != 0 e num != 1 e num != 2 ou num !=3)
+			{
+				
+				tela_not_found()
+				u.aguarde(2000)
+				limpa()
+				tela_menu()
+			}
+	}
  
 }	
 			
@@ -173,8 +267,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2831; 
- * @DOBRAMENTO-CODIGO = [22, 53];
+ * @POSICAO-CURSOR = 10746; 
+ * @DOBRAMENTO-CODIGO = [54];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
