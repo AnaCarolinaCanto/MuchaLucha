@@ -511,14 +511,13 @@ programa
 				tela_menu()
 			}
 	}
-
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2217; 
+ * @POSICAO-CURSOR = 14446; 
  * @DOBRAMENTO-CODIGO = [13, 23, 55, 128, 140, 185, 227, 322, 417];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
