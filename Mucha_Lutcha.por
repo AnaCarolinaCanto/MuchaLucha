@@ -117,7 +117,7 @@ programa
 				escreva("		▒▓▒░ ░  ░ ▒▒   ▓▒█░ ░▒   ▒ ░░ ▒░ ░   ░ ▒░   ▒ ▒ ░ ▒░▒░▒░   ▒ ░░       ▒ ░   ░ ▒░▒░▒░ ░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒  ▒▒▓  ▒  \n")  
 				escreva("		░▒ ░       ▒   ▒▒ ░  ░   ░  ░ ░  ░   ░ ░░   ░ ▒░  ░ ▒ ▒░     ░        ░       ░ ▒ ▒░ ░░▒░ ░ ░ ░ ░░   ░ ▒░ ░ ▒  ▒  \n")  
 				escreva("		░░         ░   ▒   ░ ░   ░    ░         ░   ░ ░ ░ ░ ░ ▒    ░          ░ ░   ░ ░ ░ ▒   ░░░ ░ ░    ░   ░ ░  ░ ░  ░  \n") 
-				escreva("	  	░░	      ░   ░     ░        ░         ░     ░ ░                     ░ ░     ░             ░    ░   ░        \n\n\n")
+				escreva("	  	░░	      ░   ░     ░        ░         ░     ░ ░                     ░ ░     ░             ░    ░   ░        	 fg")
  	}
  	funcao tela_menu()
 	{
@@ -135,7 +135,7 @@ programa
 				escreva("    	█                 |][|                  |][|              |][|             █\n")
 				escreva("    	█══════════════════════════════════════════════════════════════════════════█\n")
 				escreva("    	█***********************  PARA SAIR PRESSIONE => 0  ***********************█\n")
-				escreva("    	████████████████████████████████████████████████████████████████████████████\n\n\n")
+				escreva("    	████████████████████████████████████████████████████████████████████████████\n")
 				escreva("\t\t\tPara avançar, escolha uma das categorias acima:  ")
 				leia(num)
 			limpa()
@@ -185,6 +185,7 @@ programa
 		se(num == 1)
 			{
 				acesso()
+				tela_menu()
 			}
 		
 		enquanto(num != 1)
@@ -208,7 +209,7 @@ programa
 				escreva("    █   R$329,00      |][|   R$329,00    |][|    R$329,00    |][|      R$329,00     |][|       R$329,00        █\n")
 				escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
 				escreva("    █*************************************  PARA VOLTAR AO MENU => 0  *****************************************█\n")
-				escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
+				escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n")
 				escreva("\t\t\t\t\tSe interessou nestes itens? \n\t\t\tDigite o respectivo número deste para adicionar em seu carrinho:  ")
 				leia(num)
 			limpa()
@@ -249,7 +250,7 @@ programa
 				escreva("    █    R$329,00     |][|   R$329,00    |][|    R$329,00    |][|     R$329,00      |][|       R$329,00        █\n")
 				escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
 				escreva("    █*************************************  PARA VOLTAR AO MENU => 0  *****************************************█\n")
-				escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
+				escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n")
 				escreva("\t\t\t\tSe interessou nestes itens? \n\t\tDigite o respectivo número deste para adicionar em seu carrinho:  ")
 				leia(num)
 			limpa()
@@ -288,7 +289,7 @@ programa
 				escreva("    █     R$329,00    |][|   R$329,00    |][|    R$329,00    |][|      R$329,00     |][|      R$329,00         █\n")
 				escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
 				escreva("    █*************************************  PARA VOLTAR AO MENU => 0  *****************************************█\n")
-				escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
+				escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n")
 				escreva("\t\t\t\tSe interessou nestes itens? \n\t\tDigite o respectivo número deste para adicionar em seu carrinho:  ")
 				leia(num)
 			limpa()
@@ -330,7 +331,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 6902; 
+ * @POSICAO-CURSOR = 6227; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
