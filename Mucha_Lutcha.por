@@ -11,6 +11,7 @@ programa
 				logo()
 				acesso()
 				tela_menu()
+				tela_logout()
 				tela_not_found()
 				tela_lucha()
 				tela_musc()
@@ -82,10 +83,10 @@ programa
 	  			escreva("\nAguarde enquanto carregamos as informações")
 		para(init=1; init <4; init++)
 		{
-            		u.aguarde(0300)
+            		u.aguarde(0250)
             		escreva(".")
           }
-	  			u.aguarde(0300)
+	  			u.aguarde(0350)
 	  			g.iniciar_modo_grafico(verdadeiro)
 				g.definir_dimensoes_janela(480, 360)
 				g.definir_titulo_janela("Loading...")
@@ -100,10 +101,10 @@ programa
             		u.aguarde(0400)
             		escreva(".")
          			 }*/
-				u.aguarde(1000)
+				u.aguarde(2000)
 				g.encerrar_modo_grafico()
        	 		escreva("\nBem-vindo(a), ", nome, ".\n\n")
-		  		Util.aguarde(1000)
+		  		Util.aguarde(0500)
        	 	limpa()
 	}
  	funcao tela_not_found()
@@ -135,12 +136,12 @@ programa
 				escreva("    	█══════════════════════════════════════════════════════════════════════════█\n")
 				escreva("    	█***********************  PARA SAIR PRESSIONE => 0  ***********************█\n")
 				escreva("    	████████████████████████████████████████████████████████████████████████████\n\n\n")
-				escreva("\t\tPara avançar, escolha uma das categorias acima:  ")
+				escreva("\t\t\tPara avançar, escolha uma das categorias acima:  ")
 				leia(num)
 			limpa()
 		se(num == 0)
 			{
-				logo()
+				tela_logout()
 			}
 		se(num == 1)
 			{
@@ -162,6 +163,38 @@ programa
 				tela_menu()
 			}
 	}		
+	funcao tela_logout()
+	{
+		limpa()
+	  			escreva("\nDesconectando")
+		para(init=1; init <4; init++)
+		{
+            		u.aguarde(0300)
+            		escreva(".")
+            		u.aguarde(0100)
+		}
+          limpa()
+            		escreva("\nPara retornar a tela de loggin digite [1] ou [0] para encerrar o sistema:  ")
+				leia(num)
+		limpa()
+		
+		se(num == 0)
+			{
+				g.fechar_janela()
+			}
+		se(num == 1)
+			{
+				acesso()
+			}
+		
+		enquanto(num != 1)
+			{
+				tela_not_found()
+				u.aguarde(2000)
+				limpa()
+				tela_menu()
+			}
+	}
 	
 	funcao tela_lucha()
 	{
@@ -284,7 +317,8 @@ programa
 			}
 	}
  
-}	
+}
+	
 			
 	
 
@@ -296,7 +330,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1255; 
+ * @POSICAO-CURSOR = 6902; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
