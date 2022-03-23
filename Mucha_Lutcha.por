@@ -1,20 +1,21 @@
 programa
 {
+	
 	inclua biblioteca Matematica --> m
 	inclua biblioteca Graficos --> g
 	inclua biblioteca Util --> u
-	
+		
 		inteiro mutcha = g.carregar_imagem("mutcha.GIF")
 		const real itemtatame = 961.40, itemluva = 159.99, itembandagem = 38.79, itemsaco = 175.00, itemprotetor = 84.15, itemcinturao = 219.00, itemcolchonete = 19.45, itemcorda = 27.77, itemhalteres = 949.00, itemwhey = 91.99, itembola = 59.99, itemcamisa = 299.99, itemchuteira = 179.99, itemmeiao = 29.99, itemcaneleira = 49.99
 		caracter acss
-		inteiro num,item, qttatame, qtluva, qtbandagem, qtsaco, qtprotetor, qtcinturao, qtcolchonete, qtcorda, qthalteres, qtwhey, qtbola, qtcamisa, qtchuteira, qtmeiao, qtcaneleira 			
-		cadeia resp 		 	
+		inteiro init, num,item, qttatame, qtluva, qtbandagem, qtsaco, qtprotetor, qtcinturao, qtcolchonete, qtcorda, qthalteres, qtwhey, qtbola, qtcamisa, qtchuteira, qtmeiao, qtcaneleira 			
+		cadeia resp, loginglobal 		 	
 		real TotalCarrinho, totaLucha = 0.00
 	funcao inicio()
 	{
 			logo()
-			acesso()
-			tela_menu()
+			cadastro()
+			
 			tela_not_found()
 			tela_lucha()
 			tela_musc()
@@ -49,31 +50,59 @@ programa
 			escreva("\t\t\tPoxa, que pena. :( \n\n\n\n\n")
 			u.aguarde(1000)   
 			limpa()
-			logo()
+			tela_logout()
 		}                                                                                                        
 	}	
-	funcao acesso()
+	funcao cadastro()
 	{		limpa()
-			cadeia nome
-          	inteiro senha = 123
-          	escreva("\nOpa... Legal!\n")
-          	escreva("Agora digite seu nome de usuário: ")
-          	leia(nome)
-          	escreva("Digite a sua senha: ")
-          	leia(senha) 
-      	enquanto(nome != "Leonardo" e nome != "Matheus" e nome != "Douglas" e nome != "Rodrigo" e nome != "Thais" e nome != "Aninha" ou senha != 123)
-      	{
-           	limpa()
-               	escreva("Acesso negado!!! \n")
-               	escreva("\nDigite seu nome de usuário correto: ")
-               	leia(nome)
-               	escreva("Digite a sua senha: ")
-               	leia(senha)
-	      		limpa()
-	      		u.aguarde(1000)
-	      }
-	  		
-	  			limpa()
+				logico confere = falso
+				cadeia acesso, senha, tentar
+				const inteiro total = 6
+				cadeia login[total]
+				login[0] = "Rodrigo"
+				login[1] = "Matheus"
+				login[2] = "Leo"
+				login[3] = "Ana"
+				login[4] = "Thais"
+				login[5] = "Admin"
+
+				cadeia codigo[total]
+				codigo[0] = "123"
+				codigo[1] = "1234"
+				codigo[2] = "12345"
+				codigo[3] = "123456"
+				codigo[4] = "1234567"
+				codigo[5] = "Admin"
+				
+
+				faca{		
+				escreva("\nDigite seu nome de usuário: ")
+				leia(acesso)
+				escreva("Digite a sua senha: ")
+				leia(senha)
+				limpa()
+				
+				para(inteiro i = 0 ; i < total ; i++)
+				se(acesso == login[i]) 
+				se(senha == codigo[i])
+				confere = verdadeiro
+				
+				se (nao confere){
+				escreva("Login ou senha inválidos\n")
+				escreva("Tentar novamente? S ou N: ")	
+				leia(tentar)
+				
+				se(tentar != "S"){
+					tela_logout()
+				}
+				}
+			} 
+			enquanto (nao confere)
+				se(confere){
+					loginglobal = acesso
+					tela_menu()
+				}
+				limpa()
 	  			escreva("\nAguarde enquanto carregamos as informações")
 		para(init=1; init <4; init++)
 		{
@@ -88,17 +117,13 @@ programa
 				g.proximo_frame_gif(mutcha)
 				g.desenhar_imagem(0,0, mutcha)
 				g.renderizar()
-			limpa()
-				/*escreva("\nAguarde enquanto carregamos as informações")
-				para(init=1; init <4; init++)
-				{
-            		u.aguarde(0400)
-            		escreva(".")
-         			 }*/
+				limpa()
+				
 				u.aguarde(2000)
 				g.encerrar_modo_grafico()
-       	 		escreva("\nBem-vindo(a), ", nome, ".\n\n")
+       	 		escreva("\nBem-vindo(a), ", acesso, ".\n\n")
 		  		Util.aguarde(0500)
+		  		
        	 	limpa()
 	}	
 	funcao tela_not_found()
@@ -162,7 +187,7 @@ programa
 	{
 		limpa()
 	  			escreva("\nDesconectando")
-		para(init=1; init <4; init++)
+		para(init=1; init <4; init++)/* ajustar*/
 		{
             		u.aguarde(0300)
             		escreva(".")
@@ -175,11 +200,21 @@ programa
 		
 		se(num == 0)
 			{
-				g.fechar_janela()
+				g.iniciar_modo_grafico(verdadeiro)
+		          g.definir_dimensoes_janela(480, 360)
+		          g.definir_titulo_janela("Loading...")
+		          g.definir_quadro_gif(mutcha,62)
+		          g.proximo_frame_gif(mutcha)
+		          g.desenhar_imagem(0,0, mutcha)
+		          g.renderizar()
+		          escreva("\t\t ...Até logo...\n")
+		          u.aguarde(1000)
+		          g.fechar_janela()
+				
 			}
 		se(num == 1)
 			{
-				acesso()
+				cadastro()
 			}
 		
 		enquanto(num != 1)
@@ -483,8 +518,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 743; 
- * @DOBRAMENTO-CODIGO = [12, 31, 44, 22, 63, 54, 77, 89, 134, 229, 324];
+ * @POSICAO-CURSOR = 2217; 
+ * @DOBRAMENTO-CODIGO = [13, 23, 55, 128, 140, 185, 227, 322, 417];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
