@@ -90,10 +90,9 @@ programa
 	}		
 	funcao telas()
 	{
-			cadeia lucha[] = {"tatame","luva","bandagem"}
-			cadeia tatame = lucha[0]
-			cadeia luva = lucha[1]
-			inteiro resp
+			cadeia lucha[5] = {"1","2","3","4","5"}
+			escreva("Qual desses itens você se interessou? ")
+			leia(lucha)
 			escolha(num)
 		{	
 			caso 1: 
@@ -104,7 +103,7 @@ programa
 			escreva("    █   1 Tatame      |][|   2  Luva     |][|  3 Bandagem    |][|  4  Saco de Boxe  |][|  5 Protetor Bucal     █\n")
 			escreva("    █                 |][|               |][|                |][|                   |][|                       █\n")
 			escreva("    █                 |][|               |][|                |][|                   |][|                       █\n")
-			escreva("    █        R$329,00 |][|      R$329,00 |][|       R$329,00 |][|          R$329,00 |][|              R$329,00 █\n")
+			escreva("    █        R$329,00 |][|   R$329,00    |][|    R$329,00    |][|      R$329,00     |][|       R$329,00        █\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
 			escreva("    █*************************************  PARA SAIR PRESSIONE => 0  *****************************************█\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
@@ -118,7 +117,7 @@ programa
 			escreva("    █  1 Cinturão     |][| 2 Colchonete  |][| 3 Corda        |][| 4 Kit de Halteres |][|  5 Whey Protein       █\n")
 			escreva("    █                 |][|               |][|                |][|                   |][|                       █\n")
 			escreva("    █                 |][|               |][|                |][|                   |][|                       █\n")
-			escreva("    █        R$329,00 |][|      R$329,00 |][|       R$329,00 |][|          R$329,00 |][|              R$329,00 █\n")
+			escreva("    █    R$329,00     |][|   R$329,00    |][|    R$329,00    |][|     R$329,00      |][|       R$329,00        █\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
 			escreva("    █*************************************  PARA SAIR PRESSIONE => 0  *****************************************█\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
@@ -132,7 +131,7 @@ programa
 			escreva("    █  1 Bola         |][| 2 Camisa      |][| 3 Chuteira     |][| 4 Meião           |][|  5 Caneleira          █\n")
 			escreva("    █                 |][|               |][|                |][|                   |][|                       █\n")
 			escreva("    █                 |][|               |][|                |][|                   |][|                       █\n")
-			escreva("    █        R$329,00 |][|      R$329,00 |][|       R$329,00 |][|          R$329,00 |][|              R$329,00 █\n")
+			escreva("    █     R$329,00    |][|   R$329,00    |][|    R$329,00    |][|     R$329,00      |][|      R$329,00        █\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
 			escreva("    █*************************************  PARA SAIR PRESSIONE => 0  *****************************************█\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
@@ -154,7 +153,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 211; 
+ * @POSICAO-CURSOR = 7757; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
