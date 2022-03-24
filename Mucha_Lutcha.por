@@ -590,21 +590,53 @@ programa
 			escreva("   █                                        █\n")
 			escreva("   █***************** TOTAL ****************█\n")
 			escreva("   █════════════════════════════════════════█\n")
+
+			se(qttatame >= 1){
 			escreva("      Tatame - ",qttatame," --------------- R$ ",itemtatame,"\n")			
+			}
+			senao se(qtluva >= 1){
 			escreva("      Luva - ",qtluva," ----------------- R$ ",itemluva,"\n")
+			}
+			senao se(qtbandagem >= 1){
 			escreva("      Bandagem - ",qtbandagem," ------------- R$ ",itembandagem,"\n")
+			}
+			senao se(qtsaco >= 1){
 			escreva("      Saco de Boxe - ",qtsaco," --------- R$ ",itemsaco,"\n")
+			}
+			senao se(qtprotetor >=1){
 			escreva("      Protetor Bucal - ",qtprotetor," ------- R$ ",itemprotetor,"\n")
+			}
+			senao se(qtcinturao >=1){
 			escreva("      Cinturão - ",qtcinturao," ------------- R$ ",itemcinturao,"\n")
+			}
+			senao se(qtcolchonete >= 1){
 			escreva("      Colchonete - ",qtcolchonete," ----------- R$ ",itemcolchonete,"\n")
+			}
+			senao se(qtcorda >= 1){
 			escreva("      Corda - ",qtcorda," ---------------- R$ ",itemcorda,"\n")
+			}
+			senao se(qthalteres >= 1){
 			escreva("      Kit de Halteres - ",qthalteres," ------ R$ ",itemhalteres,"\n")
+			}
+			senao se(qtwhey >= 1){
 			escreva("      Whey Protein - ",qtwhey," --------- R$ ",itemwhey,"\n")
+			}
+			senao se(qtbola >= 1){
 			escreva("      Bola - ",qtbola," ----------------- R$ ",itembola,"\n")
+			}
+			senao se(qtcamisa >= 1){
 			escreva("      Camisa - ",qtcamisa," --------------- R$ ",itemcamisa,"\n")
+			}
+			senao se(qtchuteira >= 1){
 			escreva("      Chuteira - ",qtchuteira," ------------- R$ ",itemchuteira,"\n")
+			}
+			senao se(qtmeiao >= 1){
 			escreva("      Meião - ",qtmeiao," ---------------- R$ ",itemmeiao,"\n")
+			}
+			senao se(qtcaneleira >= 1){
 			escreva("      Caneleira - ",qtcaneleira," ------------ R$ ",itemcaneleira,"\n\n")
+			}
+			
 			escreva("                                 R$ ",totaLucha,"\n")
 			escreva("   █════════════════════════════════════════█\n")
 			escreva("   █****************************************█\n")
@@ -629,8 +661,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 22219; 
- * @DOBRAMENTO-CODIGO = [39, 125, 120, 108, 131, 139, 85, 162, 196, 200, 204, 208, 212, 216, 223, 175, 235, 245, 259, 263, 231, 465, 469, 565, 570, 576, 613, 619, 585];
+ * @POSICAO-CURSOR = 23487; 
+ * @DOBRAMENTO-CODIGO = [39, 125, 120, 108, 131, 139, 85, 162, 196, 200, 204, 208, 212, 216, 223, 175, 235, 245, 259, 263, 231, 465, 469, 565, 570, 576, 645, 651];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
