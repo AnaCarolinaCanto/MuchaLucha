@@ -13,10 +13,11 @@ programa
 		real TotalCarrinho, totaLucha = 0.00
 	funcao inicio()
 	{
-			logo()
-			cadastro()
+			//logo()
+			//cadastro()
 			
-			tela_not_found()
+	//		tela_not_found()
+			tela_menu()
 			tela_lucha()
 			tela_musc()
 			tela_fut()
@@ -31,7 +32,7 @@ programa
 				escreva("\t\tBem-vindo! Gostaria de ter acesso aos nossos produtos? ")
 				leia(resp)  
 		se(resp == "sim" ou resp == "Sim")
-	{
+		{
 			g.iniciar_modo_grafico(verdadeiro)
 			g.definir_dimensoes_janela(480, 360)
 			g.definir_titulo_janela("Loading...")
@@ -141,19 +142,20 @@ programa
  	funcao tela_menu()
 	{
 			escreva("    ████████████████████████████████████████████████████████████████████████████\n")
-			escreva("    █*************************  Sistema Mucha lucha  **************************█\n")
+			escreva("    █*************************  Sistema Mucha Lucha  **************************█\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════█\n")
-			escreva("    █   1 - LUCHA     |][|  2 - MUSCULAÇÃO  |][| 3 - FUTEBOL  |][|  CARRINHO   █\n")
+			escreva("    █   1 - LUCHA     |][|  2 - MUSCULAÇÃO  |][| 3 - FUTEBOL  |][|             █\n")
 			escreva("    █                 |][|                  |][|              |][|             █\n")
-			escreva("    █  Luva           |[]| Cinturão         |[]| Bola         |[]|   Vazio     █\n")
-			escreva("    █  Tatame         |[]| Colchonete       |[]| Camisa       |[]|   Vazio     █\n")
-			escreva("    █  Protetor Bucal |[]| Corda            |[]| Chuteira     |[]|   Vazio     █\n")
-			escreva("    █  Saco de Boxe   |[]| Kit de Halteres  |[]| Meião        |[]|   Vazio     █\n")
-			escreva("    █  Bandagem       |[]| Whey Protein     |[]| Caneleira    |[]|   Vazio     █\n")
+			escreva("    █  Luva           |[]| Cinturão         |[]| Bola         |[]|             █\n")
+			escreva("    █  Tatame         |[]| Colchonete       |[]| Camisa       |[]|             █\n")
+			escreva("    █  Protetor Bucal |[]| Corda            |[]| Chuteira     |[]|             █\n")
+			escreva("    █  Saco de Boxe   |[]| Kit de Halteres  |[]| Meião        |[]|             █\n")
+			escreva("    █  Bandagem       |[]| Whey Protein     |[]| Caneleira    |[]|8 - CARRINHO █\n")
 			escreva("    █_________________|][|__________________|[]|______________|][|_____________█\n")
 			escreva("    █                 |][|                  |][|              |][|             █\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════█\n")
 			escreva("    █***********************  PARA SAIR PRESSIONE => 0  ***********************█\n")
+			escreva("    █*******************  PARA FINALIZAR A COMPRA => 8  ***********************█\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████\n\n\n")
 			escreva("\t\tPara avançar, escolha uma das categorias acima:  ")
 			escreva("\n\n\t\t\t\t\t\t\t\tCARRINHO: R$",totaLucha,"\t")
@@ -175,6 +177,10 @@ programa
 			{
 				tela_fut()
 			}
+		se(num == 8)
+			{
+				tela_de_confirmacao()
+			}
 		enquanto(num != 0 e num != 1 e num != 2 ou num !=3)
 			{
 				tela_not_found()
@@ -182,6 +188,13 @@ programa
 				limpa()
 				tela_menu()
 			}
+		enquanto(num !=8)
+			{
+				u.aguarde(2000)
+				limpa()
+				tela_de_confirmacao()
+			}
+		
 	}		
 	funcao tela_logout()
 	{
@@ -237,6 +250,7 @@ programa
 			escreva("    █   R$961,40      |][|   R$159,99    |][|    R$38,79     |][|      R$175,00     |][|       R$84,15         █\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
 			escreva("    █*************************************  PARA VOLTAR AO MENU => 0   ****************************************█\n")
+			escreva("    █*********************************  PARA FINALIZAR A COMPRA => 8   ****************************************█\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
 			escreva("\t\t\t\tSe interessou nestes itens? \n\t\tDigite o respectivo número deste para adicionar em seu carrinho:  ")
 			escreva("\t\tCARRINHO: R$",totaLucha,"\t")
@@ -295,6 +309,10 @@ programa
 					{
 					limpa()
 					tela_menu()
+					}
+				se(item == 8)
+					{
+				tela_de_confirmacao()
 					}	
 		se(num == 0)
 			{
@@ -332,6 +350,7 @@ programa
 			escreva("    █    R$219,00     |][|   R$19,45     |][|    R$27,77     |][|     R$949,00      |][|       R$91,99         █\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
 			escreva("    █*************************************  PARA VOLTAR AO MENU => 0  *****************************************█\n")
+			escreva("    █*********************************  PARA FINALIZAR A COMPRA => 8   ****************************************█\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
 			escreva("\t\t\t\tSe interessou nestes itens? \n\t\tDigite o respectivo número deste para adicionar em seu carrinho:  ")
 			escreva("\t\tCARRINHO: R$",totaLucha,"\t")
@@ -390,7 +409,11 @@ programa
 					{
 					limpa()
 					tela_menu()
-					}	
+					}
+				se(item == 8)
+					{
+				tela_de_confirmacao()
+					}		
 		se(num == 0)
 			{
 				tela_menu()
@@ -426,9 +449,9 @@ programa
 			escreva("    █     R$59,99     |][|   R$299,99    |][|    R$179,99    |][|      R$29,99      |][|      R$49,99          █\n")
 			escreva("    █══════════════════════════════════════════════════════════════════════════════════════════════════════════█\n")
 			escreva("    █*************************************  PARA VOLTAR AO MENU => 0  *****************************************█\n")
+			escreva("    █*********************************  PARA FINALIZAR A COMPRA => 8   ****************************************█\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████████████\n\n\n")
 			escreva("\t\t\t\tSe interessou nestes itens? \n\t\tDigite o respectivo número deste para adicionar em seu carrinho:  ")
-			escreva("\t\tCARRINHO: R$",totaLucha,"\t")
 			leia(item)
 				se(item == 1)
 					{
@@ -480,11 +503,21 @@ programa
 					limpa()
 					tela_fut()
 					}
+				senao se(item == 8)
+					{
+						limpa()
+						tela_de_confirmacao()
+					}
+					
 				se(item == 0)
 					{
 					limpa()
 					tela_menu()
-					}	
+					}
+				se(item == 8)
+					{
+					tela_de_confirmacao()
+					}			
 			leia(num)
 			limpa()
 		se(num == 0)
@@ -511,14 +544,38 @@ programa
 				tela_menu()
 			}
 	}
+	funcao tela_de_confirmacao()
+	{
+			escreva("   ██████████████████████████████████████████\n")
+			escreva("   █                                        █\n")
+			escreva("   █***************** TOTAL ****************█\n")
+			escreva("   █════════════════════════════════════════█\n")
+			escreva("                    R$", totaLucha , "\n")
+			escreva("   █════════════════════════════════════════█\n")
+			escreva("   █****************************************█\n")
+			escreva("   ██████████████████████████████████████████\n\n\n")
+			escreva("\tDeseja confirmar a sua compra? \n\tDigite S para sim ou N para não: ")
+			leia (resp)
+		se(resp == "S" ou resp == "s")
+		{
+			escreva ("\tCompra realizada com sucesso!\n")
+			u.aguarde(1500)
+			tela_logout()
+		}
+		senao
+		{
+			limpa()
+			tela_menu()
+		}
+	}
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 14446; 
- * @DOBRAMENTO-CODIGO = [13, 23, 55, 128, 140, 185, 227, 322, 417];
+ * @POSICAO-CURSOR = 19218; 
+ * @DOBRAMENTO-CODIGO = [24, 56, 129];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
