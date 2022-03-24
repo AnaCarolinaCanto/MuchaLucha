@@ -4,7 +4,7 @@ programa
 	inclua biblioteca Matematica --> m
 	inclua biblioteca Graficos --> g
 	inclua biblioteca Util --> u
-		
+  
 		//VALOR FIXO PARA OS PRODUTOS ↓
 		const real itemtatame = 961.40, itemluva = 159.99, itembandagem = 38.79, itemsaco = 175.00, itemprotetor = 84.15, itemcinturao = 219.00, 
 		itemcolchonete = 19.45, itemcorda = 27.77, itemhalteres = 949.00, itemwhey = 91.99, itembola = 59.99, itemcamisa = 299.99, itemchuteira = 179.99, 
@@ -70,6 +70,41 @@ programa
 		}
 		senao
 		{
+			limpa()
+			u.aguarde(0500)
+			escreva("\t\t\tPoxa, que pena. :( \n\n\n\n\n")
+			u.aguarde(1000)   
+			limpa()
+			tela_logout()
+		}                                                                                                        
+	}	
+	funcao cadastro()
+	{		limpa()
+				logico confere = falso
+				cadeia acesso, senha, tentar
+				const inteiro total = 6
+				cadeia login[total]
+				login[0] = "Rodrigo"
+				login[1] = "Matheus"
+				login[2] = "Leo"
+				login[3] = "Ana"
+				login[4] = "Thais"
+				login[5] = "Admin"
+
+				cadeia codigo[total]
+				codigo[0] = "123"
+				codigo[1] = "1234"
+				codigo[2] = "12345"
+				codigo[3] = "123456"
+				codigo[4] = "1234567"
+				codigo[5] = "Admin"
+				
+
+				faca{		
+				escreva("\nDigite seu nome de usuário: ")
+				leia(acesso)
+				escreva("Digite a sua senha: ")
+				leia(senha)
 				limpa()
 				//u.aguarde(0500)
 				//escreva("\t\t\tPoxa, que pena. :( \n\n\n\n\n")
@@ -154,6 +189,7 @@ programa
        	 		//escreva("\t \t \t Bem-vindo(a), ", acesso, ".\n\n")
 	}	
 	//TELA DE NÃO ENCONTRADA ↓
+
 	funcao tela_not_found()
  	{
 			escreva("		▓██▓███   ▄▄▄        ▄████ ▓█████     ███▄    █  ▒█████  ▄▄▄█████▓     █████▒▒█████   █    ██  ███▄    █ ▓█████▄  \n")  
@@ -221,7 +257,6 @@ programa
 				limpa()
 				tela_de_confirmacao()
 			}
-		
 	}
 	//TELA DESCONEXÃO ↓		
 	funcao tela_logout()
