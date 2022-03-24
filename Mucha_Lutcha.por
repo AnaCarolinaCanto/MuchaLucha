@@ -11,7 +11,7 @@ programa
 		itemmeiao = 29.99, itemcaneleira = 49.99
 		
 		//QUANTIDADE ITENS ↓
-		inteiro init, num,item, qttatame, qtluva, qtbandagem, qtsaco, qtprotetor, qtcinturao, qtcolchonete, qtcorda, qthalteres, qtwhey, qtbola, qtcamisa, qtchuteira, qtmeiao, qtcaneleira 			
+		inteiro init,item, qttatame, qtluva, qtbandagem, qtsaco, qtprotetor, qtcinturao, qtcolchonete, qtcorda, qthalteres, qtwhey, qtbola, qtcamisa, qtchuteira, qtmeiao, qtcaneleira 			
 		//CARREGAR GIF ↓
 		inteiro mutcha = g.carregar_imagem("mutcha.GIF")
 		//VARIÁVEL DO CARRINHO ↓
@@ -19,7 +19,7 @@ programa
 		//LOGIN ADMIN ↓
 		cadeia resp, loginglobal 		 	
 		//LOGIN USÁRIO COMUM ↓
-		caracter acss
+		caracter acss, num
 		
 	//ORDEM DAS FUNÇÕES ↓
 	funcao inicio()
@@ -192,34 +192,34 @@ programa
 			escreva("\n\n\t\t\t\t\t\t\t CARRINHO R$:",totaLucha," ")
 			leia(num)
 			limpa()
-		se(num == 0)
+		se(num == '0')
 			{
 				logo()
 			}
-		se(num == 1)
+		se(num == '1')
 			{
 				tela_lucha()
 			}
-		se(num == 2)
+		se(num == '2')
 			{
 				tela_musc()
 			}
-		se(num == 3)
+		se(num == '3')
 			{
 				tela_fut()
 			}
-		se(num == 8)
+		se(num == '8')
 			{
 				tela_de_confirmacao()
 			}
-		enquanto(num != 0 e num != 1 e num != 2 ou num !=3)
+		enquanto(num != '0' e num != '1' e num != '2' ou num !='3')
 			{
 				tela_not_found()
 				u.aguarde(2000)
 				limpa()
 				tela_menu()
 			}
-		enquanto(num !=8)
+		enquanto(num !='8')
 			{
 				u.aguarde(2000)
 				limpa()
@@ -242,7 +242,7 @@ programa
 				leia(num)
 		limpa()
 		
-		se(num == 0)
+		se(num == '0')
 			{
 				g.iniciar_modo_grafico(verdadeiro)
 		          g.definir_dimensoes_janela(480, 360)
@@ -256,12 +256,12 @@ programa
 		          g.fechar_janela()
 				
 			}
-		se(num == 1)
+		se(num == '1')
 			{
 				cadastro()
 			}
 		
-		enquanto(num != 1)
+		enquanto(num != '1')
 			{
 				tela_not_found()
 				u.aguarde(2000)
@@ -355,23 +355,7 @@ programa
 					{
 				tela_de_confirmacao()
 					}	
-			se(num == 0)
-			{
-				tela_menu()
-			}
-			se(num == 1)
-			{
-				tela_lucha()
-			}
-			se(num == 2)
-			{
-				tela_musc()
-			}
-			se(num == 3)
-			{
-				tela_fut()
-			}
-			enquanto(num != 0 e num != 1 e num != 2 ou num !=3)
+			enquanto(num != '0' e num != '1' e num != '2' ou num !='3')
 			{	
 				tela_not_found()
 				u.aguarde(2000)
@@ -462,23 +446,7 @@ programa
 					{
 				tela_de_confirmacao()
 					}		
-		se(num == 0)
-			{
-				tela_menu()
-			}
-		se(num == 1)
-			{
-				tela_lucha()
-			}
-		se(num == 2)
-			{
-				tela_musc()
-			}
-		se(num == 3)
-			{
-				tela_fut()
-			}
-			enquanto(num != 0 e num != 1 e num != 2 ou num !=3)
+			enquanto(num != '0' e num != '1' e num != '2' ou num !='3')
 			{
 				tela_not_found()
 				u.aguarde(2000)
@@ -576,23 +544,7 @@ programa
 					}			
 			leia(num)
 			limpa()
-		se(num == 0)
-			{
-				tela_menu()
-			}
-		se(num == 1)
-			{
-				tela_lucha()
-			}
-		se(num == 2)
-			{
-				tela_musc()
-			}
-		se(num == 3)
-			{
-				tela_fut()
-			}
-		enquanto(num != 0 e num != 1 e num != 2 ou num !=3)
+		enquanto(num != '0' e num != '1' e num != '2' ou num !='3')
 			{	
 				tela_not_found()
 				u.aguarde(2000)
@@ -631,8 +583,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3257; 
- * @DOBRAMENTO-CODIGO = [194, 455];
+ * @POSICAO-CURSOR = 12810; 
+ * @DOBRAMENTO-CODIGO = [194, 439];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
