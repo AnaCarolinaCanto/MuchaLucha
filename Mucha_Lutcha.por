@@ -78,47 +78,13 @@ programa
 			tela_logout()
 		}                                                                                                        
 	}	
-	funcao cadastro()
-	{		limpa()
-				logico confere = falso
-				cadeia acesso, senha, tentar
-				const inteiro total = 6
-				cadeia login[total]
-				login[0] = "Rodrigo"
-				login[1] = "Matheus"
-				login[2] = "Leo"
-				login[3] = "Ana"
-				login[4] = "Thais"
-				login[5] = "Admin"
-
-				cadeia codigo[total]
-				codigo[0] = "123"
-				codigo[1] = "1234"
-				codigo[2] = "12345"
-				codigo[3] = "123456"
-				codigo[4] = "1234567"
-				codigo[5] = "Admin"
-				
-
-				faca{		
-				escreva("\nDigite seu nome de usuário: ")
-				leia(acesso)
-				escreva("Digite a sua senha: ")
-				leia(senha)
-				limpa()
-				//u.aguarde(0500)
-				//escreva("\t\t\tPoxa, que pena. :( \n\n\n\n\n")
-				u.aguarde(0150)   
-				limpa()
-				tela_logout()
-		}                                                                                                        
-	}
+	
 	//TELA LOGIN E SENHA ↓
 	funcao cadastro()
 	{		limpa()
 				logico confere = falso
 				cadeia acesso, senha, tentar
-		const inteiro total = 6
+		const inteiro total = 7
 				//LOGINS ↓
 				cadeia login[total]
 				login[0] = "Rodrigo"
@@ -126,7 +92,8 @@ programa
 				login[2] = "Leo"
 				login[3] = "Ana"
 				login[4] = "Thais"
-				login[5] = "Admin"
+				login[5] = "Douglas"
+				login[6] = "Admin"
 				// SENHAS ↓
 				cadeia codigo[total]
 				codigo[0] = "123"
@@ -134,7 +101,8 @@ programa
 				codigo[2] = "12345"
 				codigo[3] = "123456"
 				codigo[4] = "1234567"
-				codigo[5] = "Admin"
+				codigo[5] = "87654321"				
+				codigo[6] = "Admin"
 		faca{		
 				escreva("\nDigite seu nome de usuário: ")
 				leia(acesso)
@@ -323,6 +291,8 @@ programa
 					{
 					limpa()
 					escreva("\tTatame\n")
+					escreva("Tatame composto com quatro placas,\n")
+					escreva("com área total de 9.1m² e espessura de 40mm.\n")
 					escreva("Escolha a quantidade: \n")
 					leia(qttatame)
 					totaLucha = (itemtatame * qttatame) + totaLucha m.arredondar(totaLucha, 2)
@@ -333,6 +303,9 @@ programa
 					{
 					limpa()
 					escreva("\tLuva\n")
+					escreva("Luva confeccionada em material resistente,\n")
+					escreva("palmas alcochoadas para absorção de impacto\n")
+                         escreva("e proteção para dedos e punho.\n")
 					escreva("Escolha a quantidade: ")
 					leia(qtluva)
 					totaLucha = (itemluva * qtluva) + totaLucha m.arredondar(totaLucha, 2)
@@ -343,6 +316,8 @@ programa
 					{
 					limpa()
 					escreva("\tBandagem\n")
+					escreva("Bandagem desenvolvida para evitar lesões no punho.\n")
+                         escreva("Fabricada em 60% poliamida e 40% poliéster.\n")
 					escreva("Escolha a quantidade: ")
 					leia(qtbandagem)
 					totaLucha = (itembandagem * qtbandagem) + totaLucha  m.arredondar(totaLucha, 2)
@@ -353,6 +328,7 @@ programa
 					{
 					limpa()
 					escreva("\tSaco de Boxe\n")
+					escreva("Saco de boxe com dimensões de 40 cm de altura, 50 cm de largura e 80 cm comprimento.\n")
 					escreva("Escolha a quantidade: ")
 					leia(qtsaco)
 					totaLucha = (itemsaco * qtsaco) + totaLucha  m.arredondar(totaLucha, 2)
@@ -363,6 +339,7 @@ programa
 					{
 					limpa()
 					escreva("\tProtetor Bucal\n")
+					escreva("Protetor bucal em E.V.A não tóxico moldavél, indicado para praticas de artes marciais.\n")
 					escreva("Escolha a quantidade: ")
 					leia(qtprotetor)
 					totaLucha = (itemprotetor * qtprotetor) + totaLucha m.arredondar(totaLucha, 2)
@@ -424,6 +401,8 @@ programa
 					{
 					limpa()
 					escreva("\tCinturão\n")
+					escreva("Cinturão em couro sintético com espessura de 5mm.\n")
+                         escreva("Estabiliza a Coluna Vertebral, protegendo-a de lesões.\n")
 					escreva("Escolha a quantidade: \n")
 					leia(qtcinturao)
 					totaLucha = (itemcinturao * qtcinturao) + totaLucha m.arredondar(totaLucha, 2)
@@ -434,6 +413,7 @@ programa
 					{
 					limpa()
 					escreva("\tColchonete\n")
+					escreva("Colchonete produzido em espuma. Medida: 90 x 40 x 3.\n")
 					escreva("Escolha a quantidade: ")
 					leia(qtcolchonete)
 					totaLucha = (itemcolchonete * qtcolchonete) + totaLucha m.arredondar(totaLucha, 2)
@@ -444,6 +424,7 @@ programa
 					{
 					limpa()
 					escreva("\tCorda\n")
+					escreva("Corda de pular de PVC 6mm com rolamento 2,65m.\n")
 					escreva("Esccolha a quantidade: ")
 					leia(qtcorda)
 					totaLucha = (itemcorda * qtcorda) + totaLucha m.arredondar(totaLucha, 2)
@@ -454,6 +435,7 @@ programa
 					{
 					limpa()
 					escreva("\tKit de Halteres\n")
+					escreva("Kit de Halteres Revestidos Em PVC - Par de 500g,1,2,3 e 5 Kg.\n")
 					escreva("Esccolha a quantidade: ")
 					leia(qthalteres)
 					totaLucha = (itemhalteres * qthalteres) + totaLucha
@@ -464,6 +446,7 @@ programa
 					{
 					limpa()
 					escreva("\tWhey Protein\n")
+					escreva("Whey protein contém prteínas concentradas e blends.900g.\n")
 					escreva("Esccolha a quantidade: ")
 					leia(qtwhey)
 					totaLucha = (itemwhey * qtwhey) + totaLucha m.arredondar(totaLucha, 2)
@@ -525,6 +508,7 @@ programa
 					{
 					limpa()
 					escreva("\tBola\n")
+					escreva("Bola de futebol produzida em borracha, poliéster e E.V.A. Circunferência: 68 - 70 cm.\n")
 					escreva("Escolha a quantidade: \n")
 					leia(qtbola)
 					totaLucha = (itembola * qtbola) + totaLucha m.arredondar(totaLucha, 2)
@@ -535,6 +519,7 @@ programa
 					{
 					limpa()
 					escreva("\tCamisa\n")
+					escreva("Camisa seleção produzida 100% em poliéster reciclado. Tecnologia Dri-Fit.\n")
 					escreva("Escolha a quantidade: ")
 					leia(qtcamisa)
 					totaLucha = (itemcamisa * qtcamisa) + totaLucha m.arredondar(totaLucha, 2)
@@ -545,6 +530,7 @@ programa
 					{
 					limpa()
 					escreva("\tChuteira\n")
+					escreva("Chuteira tipo campo produzida em material sintético com trava fixa.\n")
 					escreva("Esccolha a quantidade: ")
 					leia(qtchuteira)
 					totaLucha = (itemchuteira * qtchuteira) + totaLucha m.arredondar(totaLucha, 2)
@@ -555,6 +541,7 @@ programa
 					{
 					limpa()
 					escreva("\tMeião\n")
+					escreva("Meião indicado para jogo, produzido com material 84% poliéster, 11% algodão e 5% elastano.\n")
 					escreva("Esccolha a quantidade: ")
 					leia(qtmeiao)
 					totaLucha = (itemmeiao * qtmeiao) + totaLucha m.arredondar(totaLucha, 2)
@@ -565,6 +552,7 @@ programa
 					{
 					limpa()
 					escreva("\tCaneleira\n")
+					escreva("Caneleira produzida em poliuretano e espuma de E.V.A ventilada antibacteriana.\n")
 					escreva("Esccolha a quantidade: ")
 					leia(qtcaneleira)
 					totaLucha = (itemcaneleira * qtcaneleira) + totaLucha m.arredondar(totaLucha, 2)
@@ -643,8 +631,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 13683; 
- * @DOBRAMENTO-CODIGO = [156, 169, 226, 269, 472];
+ * @POSICAO-CURSOR = 3257; 
+ * @DOBRAMENTO-CODIGO = [194, 455];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
