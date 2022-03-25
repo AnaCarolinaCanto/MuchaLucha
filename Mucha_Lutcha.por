@@ -15,7 +15,7 @@ programa
 			   qtcinturao, qtcolchonete, qtcorda, qthalteres, qtwhey,//multiplicadores
 			   init, qtbola, qtcamisa, qtchuteira, qtmeiao, qtcaneleira//multiplicadores
 		//CARREGAR GIF ↓
-		inteiro mutcha = g.carregar_imagem("mutcha.GIF")
+		inteiro mutcha = g.carregar_imagem("mutcha.GIF"), muchasoco = g.carregar_imagem("muchasoco.GIF")
 		//VARIÁVEL DO CARRINHO ↓
 		real TotalCarrinho, totaLucha = 0.00
 		//LOGIN ADMIN ↓
@@ -200,7 +200,14 @@ programa
 			escreva("    █                      PARA FINALIZAR A COMPRA [8]                    █\n")
 			escreva("    ███████████████████████████████████████████████████████████████████████\n")
 			escreva("\t\tEscolha uma categoria ou uma das opções acima")
-			escreva("\n\n\t\t\t\t\t\t\t CARRINHO R$:",m.arredondar(totaLucha, 2),"\n\t\t\t\t\t\t\tDigite uma opção: ")
+			escreva("\n\n\t\t\t\t\t\t\t CARRINHO R$:",m.arredondar(totaLucha, 2),"\n")
+			escreva("   ╔≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈╗\n")
+			escreva("   ║                                      ║\n")
+			escreva("   ║ Você conhce as acedemias MuchaLucha? ║\n")
+			escreva("   ║ Digite [7] e venha fazer parte do    ║\n")
+			escreva("   ║ nosso time.                          ║\n")
+			escreva("   ║                                      ║\n")
+			escreva("   ╚≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈╝\t\tDigite uma opção: ")
 			leia(num)
 			limpa()
 		se(num == '0')
@@ -223,7 +230,11 @@ programa
 			{
 			tela_de_confirmacao()
 			}
-		enquanto(num != '0' e num != '1' e num != '2' ou num !='3')
+          se(num == '7')
+			{
+			tela_acad_mucha()
+			}
+          enquanto(num != '0' e num != '1' e num != '2' ou num !='3')
 				{
 				tela_not_found()
 				u.aguarde(2000)
@@ -857,14 +868,53 @@ programa
 			tela_menu()
 			}
 	}
+//Academias MuchaLucha
+	funcao tela_acad_mucha()
+	{
+			caracter email
+		
+       		escreva("    ████████████████████████████████████████████████████████████████████████████████████\n")
+			escreva("    █                                 Academias MuchaLucha                             █\n")
+			escreva("    █                                                                                  █\n")
+			escreva("    █ MuchaLucha esportes de contato:               Academia Mucha Musculação:         █\n")
+			escreva("    █                                                                                  █\n")
+			escreva("    █ Que tal treinar na sede MuchaMucha?          Com sede também em Teresópolis,     █\n")
+			escreva("    █                                              as academias MuchaLucha contam      █\n")
+			escreva("    █ Nossa academia-sede, em Teresópolis,         com os melhores e mais modernos     █\n")
+			escreva("    █ Rio de Janeiro, oferece aulas de             equipamentos.                       █\n")
+			escreva("    █ Jiu-Jitsu, Boxe e Defesa pessoal.            Se o seu objetivo é conquistar um   █\n")
+			escreva("    █                                              corpo mais forte, resistente, e     █\n")
+			escreva("    █                                              uma vida mais saudavél venha fazer  █\n")
+			escreva("    █                                              parte do nosso time.                █\n")
+			escreva("    █                                                                                  █\n")
+			escreva("    █                                                                                  █\n")
+			escreva("    ████████████████████████████████████████████████████████████████████████████████████\n\n\n")
+			escreva("    Cadastre-se, marque uma avaliação e venha fazer parte do nosso time!\n")
+			escreva("    Digite aqui o seu endereço de e-mail: ")
+			leia(email)
+			se(email == email){
+			escreva("\n  Parabéns! Agora você faz parte do time MuchaLucha.\n")
+			     u.aguarde(2000)
+	  			g.iniciar_modo_grafico(verdadeiro)
+				g.definir_dimensoes_janela(220, 152)
+				g.definir_titulo_janela("teste")
+				g.desenhar_imagem(0,0, muchasoco)
+				g.renderizar()
+				limpa()
+				u.aguarde(2000)
+				g.encerrar_modo_grafico()
+			limpa()
+			tela_menu()
+			}
+	}
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 24187; 
- * @DOBRAMENTO-CODIGO = [25, 51, 47, 67, 33, 130, 141, 149, 78, 170, 183, 234, 275, 445, 649, 636, 676, 663, 702, 690, 729, 716, 743, 769, 774, 778, 782, 618, 791];
+ * @POSICAO-CURSOR = 36303; 
+ * @DOBRAMENTO-CODIGO = [141, 149, 170, 183, 245, 286, 456, 660, 647, 687, 674, 713, 701, 740, 727, 754, 780, 785, 789, 793, 629];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
