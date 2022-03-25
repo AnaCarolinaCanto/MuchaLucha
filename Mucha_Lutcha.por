@@ -15,7 +15,7 @@ programa
 			   qtcinturao, qtcolchonete, qtcorda, qthalteres, qtwhey,//multiplicadores
 			   init, qtbola, qtcamisa, qtchuteira, qtmeiao, qtcaneleira//multiplicadores
 		//CARREGAR GIF ↓
-		inteiro mutcha = g.carregar_imagem("mutcha.GIF"), muchasoco = g.carregar_imagem("muchasoco.GIF"), 
+		inteiro mutcha = g.carregar_imagem("mutcha.GIF"), 
 			whey =g.carregar_imagem("whey.gif"), saco = g.carregar_imagem("saco.gif"), protetor =g.carregar_imagem("protetor.gif"), meiao = g.carregar_imagem("meiao.gif"),
 			halteres =g.carregar_imagem("halteres.gif"), luva = g.carregar_imagem("luva.gif"),corda =g.carregar_imagem("corda.gif"), colchonete = g.carregar_imagem("colchonete.gif"),	
 			cinturao =g.carregar_imagem("cinturao.gif"), chuteira = g.carregar_imagem("chuteira.gif"),caneleira =g.carregar_imagem("caneleira.gif"), camisa = g.carregar_imagem("camisa.gif"),
@@ -1076,7 +1076,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1617; 
+ * @POSICAO-CURSOR = 1171; 
  * @DOBRAMENTO-CODIGO = [38, 92, 192, 203, 308, 365, 396, 429, 461, 493, 525, 530, 535, 538, 347, 585, 566, 599, 631, 662, 694, 727, 732, 736, 741, 547, 787, 768, 820, 801, 852, 834, 885, 866, 917, 931, 936, 940, 944, 750, 959, 962, 965, 968, 971, 974, 977, 980, 983, 986, 989, 993, 996, 999, 1002, 1009, 1015, 953, 1022];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
