@@ -15,7 +15,12 @@ programa
 			   qtcinturao, qtcolchonete, qtcorda, qthalteres, qtwhey,//multiplicadores
 			   init, qtbola, qtcamisa, qtchuteira, qtmeiao, qtcaneleira//multiplicadores
 		//CARREGAR GIF ↓
-		inteiro mutcha = g.carregar_imagem("mutcha.GIF"), muchasoco = g.carregar_imagem("muchasoco.GIF")
+		inteiro mutcha = g.carregar_imagem("mutcha.GIF"), muchasoco = g.carregar_imagem("muchasoco.GIF"), 
+			whey =g.carregar_imagem("whey.gif"), saco = g.carregar_imagem("saco.gif"), protetor =g.carregar_imagem("protetor.gif"), meiao = g.carregar_imagem("meiao.gif"),
+			halteres =g.carregar_imagem("halteres.gif"), luva = g.carregar_imagem("luva.gif"),corda =g.carregar_imagem("corda.gif"), colchonete = g.carregar_imagem("colchonete.gif"),	
+			cinturao =g.carregar_imagem("cinturao.gif"), chuteira = g.carregar_imagem("chuteira.gif"),caneleira =g.carregar_imagem("caneleira.gif"), camisa = g.carregar_imagem("camisa.gif"),
+			bola =g.carregar_imagem("bola.gif"), bandagem = g.carregar_imagem("bandagem.gif"), tatame = g.carregar_imagem("tatame.gif")
+		
 		//VARIÁVEL DO CARRINHO ↓
 		real TotalCarrinho, totaLucha = 0.00
 		//LOGIN ADMIN ↓
@@ -24,7 +29,7 @@ programa
 		caracter num
 	//ORDEM DAS FUNÇÕES ↓
 	funcao inicio()
-	{			
+	{		
 			logo()
 			cadastro()
 			tela_menu()
@@ -313,7 +318,13 @@ programa
 			          escreva("   █                                                 █\n")
 			          escreva("   ███████████████████████████████████████████████████\n\n")
 					escreva("   Escolha a quantidade: \n")
+		  			g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 360)
+					g.definir_titulo_janela("tatame")
+					g.desenhar_imagem(0,0, tatame )
+					g.renderizar()
 					leia(qttatame)
+					g.encerrar_modo_grafico()
 			enquanto(qttatame > esttatame)
 					{
 					limpa()
@@ -339,7 +350,13 @@ programa
 			          escreva("   █                                               █\n")
 			          escreva("   █████████████████████████████████████████████████\n\n")
 					escreva("   Escolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 360)
+					g.definir_titulo_janela("Luva")
+					g.desenhar_imagem(0,0, luva )
+					g.renderizar()
 					leia(qtluva)
+					g.encerrar_modo_grafico()
 			enquanto(qtluva > estluva)
 					{
 					limpa()
@@ -365,7 +382,13 @@ programa
 			          escreva("   █                                                    █\n")
 			          escreva("   ██████████████████████████████████████████████████████\n\n")
 					escreva("   Escolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 360)
+					g.definir_titulo_janela("Luva")
+					g.desenhar_imagem(0,0, bandagem )
+					g.renderizar()
 					leia(qtbandagem)
+					g.encerrar_modo_grafico()
 			enquanto(qtbandagem > estbandagem)
 					{
 					limpa()
@@ -391,7 +414,13 @@ programa
 			          escreva("   █                                                  █\n")
 			          escreva("   ████████████████████████████████████████████████████\n\n")
 					escreva("   Escolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 360)
+					g.definir_titulo_janela("saco")
+					g.desenhar_imagem(0,0, saco)
+					g.renderizar()
 					leia(qtsaco)
+					g.encerrar_modo_grafico()
 			enquanto(qtsaco > estsaco)
 					{
 					limpa()
@@ -417,7 +446,13 @@ programa
 			          escreva("   █                                                █\n")
 			          escreva("   ██████████████████████████████████████████████████\n\n")
 					escreva("   Escolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 360)
+					g.definir_titulo_janela("Luva")
+					g.desenhar_imagem(0,0, protetor)
+					g.renderizar()
 					leia(qtprotetor)
+					g.encerrar_modo_grafico()
 			enquanto(qtprotetor > estprotetor)
 					{
 					limpa()
@@ -485,7 +520,13 @@ programa
 			          escreva("   █                                                    █\n")
 			          escreva("   ██████████████████████████████████████████████████████\n\n")
 					escreva("   Escolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 360)
+					g.definir_titulo_janela("Cinturão")
+					g.desenhar_imagem(0,0, cinturao )
+					g.renderizar()
 					leia(qtcinturao)
+					g.encerrar_modo_grafico()
 			enquanto(qtcinturao > estcinturao)
 					{
 					limpa()
@@ -511,7 +552,13 @@ programa
 			          escreva("   █                                    █\n")
 			          escreva("   ██████████████████████████████████████\n\n")
 					escreva("   Escolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 360)
+					g.definir_titulo_janela("Colchonete")
+					g.desenhar_imagem(0,0, colchonete)
+					g.renderizar()
 					leia(qtcolchonete)
+					g.encerrar_modo_grafico()
 			enquanto(qtcolchonete > estcolchonete)
 					{
 					limpa()
@@ -536,7 +583,13 @@ programa
 			          escreva("   █                                                   █\n")
 			          escreva("   █████████████████████████████████████████████████████\n\n")
 					escreva("   Esccolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 360)
+					g.definir_titulo_janela("Corda")
+					g.desenhar_imagem(0,0, corda )
+					g.renderizar()
 					leia(qtcorda)
+					g.encerrar_modo_grafico()
 			enquanto(qtcorda > estcorda)
 					{
 					limpa()
@@ -562,8 +615,14 @@ programa
 			          escreva("   █                                       █\n")
 			          escreva("   █████████████████████████████████████████\n\n")
 					escreva("   Esccolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 360)
+					g.definir_titulo_janela("halteres")
+					g.desenhar_imagem(0,0, halteres)
+					g.renderizar()
 					leia(qthalteres)
-			enquanto(qthalteres > esthalteres)
+					g.encerrar_modo_grafico()
+					enquanto(qthalteres > esthalteres)
 					{
 					limpa()
 					escreva("Quantidade inválida: ")
@@ -589,7 +648,13 @@ programa
 			          escreva("   █                                              █\n")
 			          escreva("   ████████████████████████████████████████████████\n\n")
 					escreva("   Esccolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(360, 480)
+					g.definir_titulo_janela("Whey")
+					g.desenhar_imagem(0,0, whey)
+					g.renderizar()
 					leia(qtwhey)
+					g.encerrar_modo_grafico()
 			enquanto(qtwhey > estwhey)
 					{
 					limpa()
@@ -657,7 +722,13 @@ programa
 			          escreva("   █                                           █\n")
 			          escreva("   █████████████████████████████████████████████\n\n")
 					escreva("   Escolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 480)
+					g.definir_titulo_janela("Bola")
+					g.desenhar_imagem(0,0, bola )
+					g.renderizar()
 					leia(qtbola)
+					g.encerrar_modo_grafico()
 			enquanto(qtbola > estbola)
 					{
 					limpa()
@@ -684,7 +755,13 @@ programa
 			          escreva("   █                                               █\n")
 			          escreva("   █████████████████████████████████████████████████\n\n")
 					escreva("   Escolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 480)
+					g.definir_titulo_janela("camisa")
+					g.desenhar_imagem(0,0, camisa )
+					g.renderizar()
 					leia(qtcamisa)
+					g.encerrar_modo_grafico()
 			enquanto(qtcamisa > estcamisa)
 					{
 					limpa()
@@ -710,7 +787,13 @@ programa
 			          escreva("   █                                              █\n")
 			          escreva("   ████████████████████████████████████████████████\n\n")
 					escreva("   Esccolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 480)
+					g.definir_titulo_janela("Chuteira")
+					g.desenhar_imagem(0,0, chuteira)
+					g.renderizar()
 					leia(qtchuteira)
+					g.encerrar_modo_grafico()
 			enquanto(qtchuteira > estchuteira)
 					{
 					limpa()
@@ -737,7 +820,13 @@ programa
 			          escreva("   █                                          █\n")
 			          escreva("   ████████████████████████████████████████████\n\n")
 					escreva("   Esccolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 480)
+					g.definir_titulo_janela("Meião")
+					g.desenhar_imagem(0,0, meiao )
+					g.renderizar()
 					leia(qtmeiao)
+					g.encerrar_modo_grafico()
 			enquanto(qtmeiao > estmeiao)
 					{
 					limpa()
@@ -763,7 +852,13 @@ programa
 			          escreva("   █                                              █\n")
 			          escreva("   ████████████████████████████████████████████████\n\n")
 					escreva("   Esccolha a quantidade: ")
+					g.iniciar_modo_grafico(verdadeiro)
+					g.definir_dimensoes_janela(480, 480)
+					g.definir_titulo_janela("Caneleira")
+					g.desenhar_imagem(0,0, caneleira)
+					g.renderizar()
 					leia(qtcaneleira)
+					g.encerrar_modo_grafico()
 			enquanto(qtcaneleira > estcaneleira)
 					{
 					limpa()
@@ -913,8 +1008,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 36303; 
- * @DOBRAMENTO-CODIGO = [141, 149, 170, 183, 245, 286, 456, 660, 647, 687, 674, 713, 701, 740, 727, 754, 780, 785, 789, 793, 629];
+ * @POSICAO-CURSOR = 2078; 
+ * @DOBRAMENTO-CODIGO = [72, 38, 127, 131, 135, 121, 110, 146, 154, 83, 175, 188, 250, 309, 340, 373, 405, 437, 469, 474, 479, 482, 291, 529, 510, 543, 575, 606, 638, 671, 676, 680, 685, 491, 731, 712, 764, 745, 796, 778, 829, 810, 861, 875, 880, 884, 888, 694, 903, 906, 909, 912, 915, 918, 921, 924, 927, 930, 933, 937, 940, 943, 946, 953, 959, 897, 966];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
