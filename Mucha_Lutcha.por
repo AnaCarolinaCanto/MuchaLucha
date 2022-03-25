@@ -16,20 +16,20 @@ programa
 			   qttatame, qtluva, qtbandagem, qtsaco, qtprotetor, //multiplicadores
 			   qtcinturao, qtcolchonete, qtcorda, qthalteres, qtwhey,//multiplicadores
 			   qtbola, qtcamisa, qtchuteira, qtmeiao, qtcaneleira,//multiplicadores
-			   init,item			
+			   init			
 		//CARREGAR GIF ↓
 		inteiro mutcha = g.carregar_imagem("mutcha.GIF")
 		//VARIÁVEL DO CARRINHO ↓
 		real TotalCarrinho, totaLucha = 0.00
 		//LOGIN ADMIN ↓
-		cadeia resp, loginglobal 		 	
+		cadeia resp, loginglobal, item 		 	
 		//LOGIN USÁRIO COMUM ↓
 		caracter acss, num
 	//ORDEM DAS FUNÇÕES ↓
 	funcao inicio()
 	{			
-				logo()
-				cadastro()
+				//logo()
+				//cadastro()
 				tela_menu()
 				tela_not_found()
 				tela_lucha()
@@ -190,8 +190,8 @@ programa
 			escreva("    █                        PARA SAIR PRESSIONE [0]                      █\n")
 			escreva("    █                      PARA FINALIZAR A COMPRA [8]                    █\n")
 			escreva("    ███████████████████████████████████████████████████████████████████████\n")
-			escreva("\t\tPara avançar, escolha uma das opções acima:  ")
-			escreva("\n\n\t\t\t\t\t\t\t CARRINHO R$:",totaLucha," ")
+			escreva("\t\tEscolha uma categoria ou uma das opções acima")
+			escreva("\n\n\t\t\t\t\t\t\t CARRINHO R$:",m.arredondar(totaLucha, 2),"\n\t\t\t\t\t\t\tDigite uma opção: ")
 			leia(num)
 			limpa()
 		se(num == '0')
@@ -284,11 +284,9 @@ programa
 			escreva("    █                                     PARA VOLTAR AO MENU [0]                                      █\n")
 			escreva("    █                                   PARA FINALIZAR A COMPRA [8]                                    █\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████\n")
-			escreva("\t\t\t\t        Se interessou nestes itens? \n\t\t        Digite o respectivo número para adicionar em seu carrinho ↑\n\n")
-			totaLucha = totaLucha m.arredondar(totaLucha, 2)
-			escreva("\t\t\t\t\t\t\t                             CARRINHO R$:",totaLucha," ")
-			leia(item)
-			se(item == 1)
+			escreva("\t\t\t\t        Se interessou nestes itens? \n\n\t\t                 ↑ Digite um Item ou uma das Opções acima ↑\n")
+			escreva("\n\t\t\t\t\t\t\t                             CARRINHO R$:",m.arredondar(totaLucha, 2),"\n\t\t\t\t\t\t\t                            Digite uma opção: ")			leia(item)
+			se(item == "1")
 					{
 					limpa()
 					escreva("\tTatame ",esttatame," - unidades\n")
@@ -296,12 +294,12 @@ programa
 					escreva("com área total de 9.1m² e espessura de 40mm.\n")
 					escreva("Escolha a quantidade: \n")
 					leia(qttatame)
-					totaLucha = (itemtatame * qttatame) + totaLucha m.arredondar(totaLucha, 2)
+					totaLucha = (itemtatame * qttatame) + totaLucha 
 					esttatame = esttatame - qttatame
 					limpa()
 					tela_lucha()
 					}
-			senao se(item == 2)
+			senao se(item == "2")
 					{
 					limpa()
 					escreva("\tLuva ",estluva," - unidades\n")
@@ -316,7 +314,7 @@ programa
 					limpa()
 					tela_lucha()
 					}
-			senao se(item == 3)
+			senao se(item == "3")
 					{
 					limpa()
 					escreva("\tBandagem ",estbandagem," - unidades\n")
@@ -330,7 +328,7 @@ programa
 					limpa()
 					tela_lucha()
 					}
-			senao se(item == 4)
+			senao se(item == "4")
 					{
 					limpa()
 					escreva("\tSaco de Boxe ",estsaco," - unidades\n")
@@ -343,7 +341,7 @@ programa
 					limpa()
 					tela_lucha()
 					}
-			senao se(item == 5)
+			senao se(item == "5")
 					{
 					limpa()
 					escreva("\tProtetor Bucal ",estprotetor," - unidades\n")
@@ -356,15 +354,16 @@ programa
 					limpa()
 					tela_lucha()
 					}
-			se(item == 0)
+			se(item == "0")
 					{
 					limpa()
 					tela_menu()
 					}
-			se(item == 8)
+			se(item == "8")
 					{
 				tela_de_confirmacao()
 					}	
+					limpa()
 			enquanto(num != '0' e num != '1' e num != '2' ou num !='3')
 			{	
 				tela_not_found()
@@ -388,11 +387,10 @@ programa
 			escreva("    █                                      PARA VOLTAR AO MENU [0]                                      █\n")
 			escreva("    █                                    PARA FINALIZAR A COMPRA [8]                                    █\n")
 			escreva("    █████████████████████████████████████████████████████████████████████████████████████████████████████\n")
-			escreva("\n\t\t\t\t        Se interessou nestes itens? \n\t\t     Digite o respectivo número deste para adicionar em seu carrinho\n")
-			totaLucha = totaLucha m.arredondar(totaLucha, 2)
-			escreva("\n\t\t\t\t\t\t\t                                 CARRINHO R$:",totaLucha," ")
+			escreva("\t\t\t\t        Se interessou nestes itens? \n\n\t\t                 ↑ Digite um Item ou uma das Opções acima ↑\n")
+			escreva("\n\t\t\t\t\t\t\t                             CARRINHO R$:",m.arredondar(totaLucha, 2), "\n\t\t\t\t\t\t\t                            Digite uma opção: ")
 				leia(item)
-			se(item == 1)
+			se(item == "1")
 					{
 					limpa()
 					escreva("\tCinturão ",estcinturao," - unidades\n")
@@ -406,7 +404,7 @@ programa
 					limpa()
 					tela_musc()
 					}
-			senao se(item == 2)
+			senao se(item == "2")
 					{
 					limpa()
 					escreva("\tColchonete ",estcolchonete," - unidades\n")
@@ -419,7 +417,7 @@ programa
 					limpa()
 					tela_musc()
 					}
-			senao se(item == 3)
+			senao se(item == "3")
 					{
 					limpa()
 					escreva("\tCorda ",estcorda," - unidades\n")
@@ -432,7 +430,7 @@ programa
 					limpa()
 					tela_musc()
 					}
-			senao se(item == 4)
+			senao se(item == "4")
 					{
 					limpa()
 					escreva("\tKit de Halteres ",esthalteres," - unidades\n")
@@ -445,7 +443,7 @@ programa
 					limpa()
 					tela_musc()
 					}
-			senao se(item == 5)
+			senao se(item == "5")
 					{
 					limpa()
 					escreva("\tWhey Protein ",estwhey," - unidades\n")
@@ -458,15 +456,16 @@ programa
 					limpa()
 					tela_musc()
 					}
-			se(item == 0)
+			se(item == "0")
 					{
 					limpa()
 					tela_menu()
 					}
-			se(item == 8)
+			se(item == "8")
 					{
 				tela_de_confirmacao()
 					}		
+					limpa()
 			enquanto(num != '0' e num != '1' e num != '2' ou num !='3')
 			{
 				tela_not_found()
@@ -489,11 +488,10 @@ programa
 			escreva("    █                                       PARA VOLTAR AO MENU [0]                                    █\n")
 			escreva("    █                                      PARA FINALIZAR A COMPRA [8]                                 █\n")
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████\n")
-			escreva("\n\t\t\t\t       Se interessou nestes itens? \n\t\t     Digite o respectivo número deste para adicionar em seu carrinho")
-			totaLucha = totaLucha m.arredondar(totaLucha, 2)
-			escreva("\n\t\t\t\t\t                                               CARRINHO R$:",totaLucha," ")
+			escreva("\t\t\t\t        Se interessou nestes itens? \n\n\t\t                 ↑ Digite um Item ou uma das Opções acima ↑\n")
+			escreva("\n\t\t\t\t\t\t\t                             CARRINHO R$:",m.arredondar(totaLucha, 2), "\n\t\t\t\t\t\t\t                            Digite uma opção: ")
 			leia(item)
-				se(item == 1)
+				se(item == "1")
 					{
 					limpa()
 					escreva("\tBola ",estbola," - unidades\n")
@@ -506,7 +504,7 @@ programa
 					limpa()
 					tela_fut()
 					}
-				senao se(item == 2)
+				senao se(item == "2")
 					{
 					limpa()
 					escreva("\tCamisa ",estcamisa," - unidades\n")
@@ -519,7 +517,7 @@ programa
 					limpa()
 					tela_fut()
 					}
-				senao se(item == 3)
+				senao se(item == "3")
 					{
 					limpa()
 					escreva("\tChuteira ",estchuteira," - unidades\n")
@@ -532,7 +530,7 @@ programa
 					limpa()
 					tela_fut()
 					}
-				senao se(item == 4)
+				senao se(item == "4")
 					{
 					limpa()
 					escreva("\tMeião ",estmeiao," - unidades\n")
@@ -545,7 +543,7 @@ programa
 					limpa()
 					tela_fut()
 					}
-				senao se(item == 5)
+				senao se(item == "5")
 					{
 					limpa()
 					escreva("\tCaneleira ",estcaneleira," - unidades\n")
@@ -558,23 +556,22 @@ programa
 					limpa()
 					tela_fut()
 					}
-				senao se(item == 8)
+				senao se(item == "8")
 					{
 						limpa()
 						tela_de_confirmacao()
 					}					
-				se(item == 0)
+				se(item == "0")
 					{
 					limpa()
 					tela_menu()
 					}
-				se(item == 8)
+				se(item == "8")
 					{
 					tela_de_confirmacao()
 					}			
-			leia(num)
-			limpa()
-		enquanto(num != '0' e num != '1' e num != '2' ou num !='3')
+				limpa()
+		enquanto(item != "0" e item != "1" e item != "2" ou item !="3")
 			{	
 				tela_not_found()
 				u.aguarde(2000)
@@ -586,61 +583,58 @@ programa
 	funcao tela_de_confirmacao()
 	{
 			totaLucha = totaLucha m.arredondar(totaLucha, 2)
-			escreva("   ██████████████████████████████████████████\n")
-			escreva("   █                                        █\n")
-			escreva("   █***************** TOTAL ****************█\n")
-			escreva("   █════════════════════════════════════════█\n")
+			escreva("    ════════════════════════════════════════ \n")
+			escreva("    ***************** TOTAL **************** \n")
+			escreva("    ════════════════════════════════════════ \n")
 
 			se(qttatame >= 1){
 			escreva("      Tatame - ",qttatame," --------------- R$ ",itemtatame,"\n")			
 			}
-			senao se(qtluva >= 1){
+			se(qtluva >= 1){
 			escreva("      Luva - ",qtluva," ----------------- R$ ",itemluva,"\n")
 			}
-			senao se(qtbandagem >= 1){
+			se(qtbandagem >= 1){
 			escreva("      Bandagem - ",qtbandagem," ------------- R$ ",itembandagem,"\n")
 			}
-			senao se(qtsaco >= 1){
+			se(qtsaco >= 1){
 			escreva("      Saco de Boxe - ",qtsaco," --------- R$ ",itemsaco,"\n")
 			}
-			senao se(qtprotetor >=1){
+			se(qtprotetor >=1){
 			escreva("      Protetor Bucal - ",qtprotetor," ------- R$ ",itemprotetor,"\n")
 			}
-			senao se(qtcinturao >=1){
+			se(qtcinturao >=1){
 			escreva("      Cinturão - ",qtcinturao," ------------- R$ ",itemcinturao,"\n")
 			}
-			senao se(qtcolchonete >= 1){
+			se(qtcolchonete >= 1){
 			escreva("      Colchonete - ",qtcolchonete," ----------- R$ ",itemcolchonete,"\n")
 			}
-			senao se(qtcorda >= 1){
+			se(qtcorda >= 1){
 			escreva("      Corda - ",qtcorda," ---------------- R$ ",itemcorda,"\n")
 			}
-			senao se(qthalteres >= 1){
+			se(qthalteres >= 1){
 			escreva("      Kit de Halteres - ",qthalteres," ------ R$ ",itemhalteres,"\n")
 			}
-			senao se(qtwhey >= 1){
+			se(qtwhey >= 1){
 			escreva("      Whey Protein - ",qtwhey," --------- R$ ",itemwhey,"\n")
 			}
-			senao se(qtbola >= 1){
+			se(qtbola >= 1){
 			escreva("      Bola - ",qtbola," ----------------- R$ ",itembola,"\n")
 			}
-			senao se(qtcamisa >= 1){
+			se(qtcamisa >= 1){
 			escreva("      Camisa - ",qtcamisa," --------------- R$ ",itemcamisa,"\n")
 			}
-			senao se(qtchuteira >= 1){
+			se(qtchuteira >= 1){
 			escreva("      Chuteira - ",qtchuteira," ------------- R$ ",itemchuteira,"\n")
 			}
-			senao se(qtmeiao >= 1){
+			se(qtmeiao >= 1){
 			escreva("      Meião - ",qtmeiao," ---------------- R$ ",itemmeiao,"\n")
 			}
-			senao se(qtcaneleira >= 1){
+			se(qtcaneleira >= 1){
 			escreva("      Caneleira - ",qtcaneleira," ------------ R$ ",itemcaneleira,"\n\n")
 			}
 			
-			escreva("                                 R$ ",totaLucha,"\n")
-			escreva("   █════════════════════════════════════════█\n")
-			escreva("   █****************************************█\n")
-			escreva("   ██████████████████████████████████████████\n\n\n")
+			escreva("                   R$ ",m.arredondar(totaLucha,2),"\n")
+			escreva("    ════════════════════════════════════════ \n")
 			escreva("\tDeseja confirmar a sua compra? \n\tDigite S para sim ou N para não: ")
 			leia (resp)
 		se(resp == "S" ou resp == "s")
@@ -661,8 +655,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 23487; 
- * @DOBRAMENTO-CODIGO = [39, 125, 120, 108, 131, 139, 85, 162, 196, 200, 204, 208, 212, 216, 223, 175, 235, 245, 259, 263, 231, 465, 469, 565, 570, 576, 645, 651];
+ * @POSICAO-CURSOR = 7966; 
+ * @DOBRAMENTO-CODIGO = [39, 125, 120, 108, 131, 139, 85, 162, 196, 200, 204, 208, 212, 216, 223, 235, 245, 259, 263, 563, 568, 639, 645];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
