@@ -30,8 +30,8 @@ programa
 	//ORDEM DAS FUNÇÕES ↓
 	funcao inicio()
 	{		
-			//logo()
-			//cadastro()
+			logo()
+			cadastro()
 			tela_menu()
 			tela_not_found()
 	}
