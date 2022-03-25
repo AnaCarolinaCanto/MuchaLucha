@@ -19,7 +19,7 @@ programa
 			whey =g.carregar_imagem("whey.gif"), saco = g.carregar_imagem("saco.gif"), protetor =g.carregar_imagem("protetor.gif"), meiao = g.carregar_imagem("meiao.gif"),
 			halteres =g.carregar_imagem("halteres.gif"), luva = g.carregar_imagem("luva.gif"),corda =g.carregar_imagem("corda.gif"), colchonete = g.carregar_imagem("colchonete.gif"),	
 			cinturao =g.carregar_imagem("cinturao.gif"), chuteira = g.carregar_imagem("chuteira.gif"),caneleira =g.carregar_imagem("caneleira.gif"), camisa = g.carregar_imagem("camisa.gif"),
-			bola =g.carregar_imagem("bola.gif"), bandagem = g.carregar_imagem("bandagem.gif"), tatame = g.carregar_imagem("tatame.gif")
+			bola =g.carregar_imagem("bola.gif"), bandagem = g.carregar_imagem("bandagem.gif"), tatame = g.carregar_imagem("tatame.gif"), muchalucha =g.carregar_imagem("muchalucha.gif"), cats = g.carregar_imagem("cats.GIF")
 		
 		//VARIÁVEL DO CARRINHO ↓
 		real TotalCarrinho, totaLucha = 0.00
@@ -30,8 +30,8 @@ programa
 	//ORDEM DAS FUNÇÕES ↓
 	funcao inicio()
 	{		
-			logo()
-			cadastro()
+			//logo()
+			//cadastro()
 			tela_menu()
 			tela_not_found()
 	}
@@ -46,25 +46,34 @@ programa
 			u.aguarde(50)
 			escreva("  ██  ██  ██ ██    ██ ██      ██   ██ ██   ██     ██      ██    ██ ██      ██   ██ ██   ██\n")
 			u.aguarde(40)
-			escreva("  ██      ██  ██████   ██████ ██   ██ ██   ██     ███████  ██████   ██████ ██   ██ ██   ██\n\n\n")
+			escreva("  ██      ██  ██████   ██████ ██   ██ ██   ██     ███████  ██████   ██████ ██   ██ ██   ██\n\n")
 			u.aguarde(30)      
-			escreva("\t\tBem-vindo! Gostaria de ter acesso aos nossos produtos? ")
-			leia(resp)  
-		se(resp == "sim" ou resp == "Sim")
+			
+			escreva("               ╔≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈╗\n")
+			escreva("               ║                     Bem-vindo!                    ║\n")
+			escreva("               ║                                                   ║\n")
+			escreva("               ║    Gostaria de ter acesso aos nossos produtos?    ║\n")
+			escreva("               ╚≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈╝\n\n")
+			escreva("                      Digite [S] para entrar ou [N] para sair: ")
+			leia(resp)
+			
+			
+			
+			/*escreva("\t\t\t\t\tBem-vindo! \n\t\t\t Gostaria de ter acesso aos nossos produtos?\n\t\t\t  Digite [S] para entrar ou [N] para sair: ")
+			leia(resp)  */
+		se(resp == "sim" ou resp == "Sim" ou resp == "S" ou resp == "s")
 		{
 				//CARREGANDO ANIMADO ↓
-				escreva("\n \t\t\t\t\tCarregando")
+				escreva("\n\t\t\t\t     Carregando")
 			para(init=1; init <4; init++)					
 				{											
-            		u.aguarde(0200)
+            		u.aguarde(0300)
             		escreva(".")						
            		}
 				u.aguarde(0300)
 				g.iniciar_modo_grafico(verdadeiro)
 				g.definir_dimensoes_janela(480, 360)
 				g.definir_titulo_janela("Loading...")
-				g.definir_quadro_gif(mutcha,62)
-				g.proximo_frame_gif(mutcha)
 				g.desenhar_imagem(0,0, mutcha)
 				g.renderizar()
 				u.aguarde(1000)
@@ -117,7 +126,15 @@ programa
 			para(inteiro i = 0 ; i < total ; i++)
 				se(acesso == login[i]) 
 					se(senha == codigo[i])
-						confere = verdadeiro		
+						confere = verdadeiro
+			     escreva("\n\t\t\t\t     Carregando")
+			para(init=1; init <4; init++)					
+				{											
+            		u.aguarde(0300)
+            		escreva(".")						
+           		}
+				u.aguarde(0200)
+				limpa()	
 
 			se(nao confere)
 		{
@@ -182,8 +199,6 @@ programa
 			escreva("		▒██▒ ░  ░ ▓█   ▓██▒░▒▓███▀▒░▒████▒   ▒██░   ▓██░░ ████▓▒░  ▒██▒ ░    ░▒█░   ░ ████▓▒░▒▒█████▓ ▒██░   ▓██░░▒████▓  \n")  
 			escreva("		▒▓▒░ ░  ░ ▒▒   ▓▒█░ ░▒   ▒ ░░ ▒░ ░   ░ ▒░   ▒ ▒ ░ ▒░▒░▒░   ▒ ░░       ▒ ░   ░ ▒░▒░▒░ ░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒  ▒▒▓  ▒  \n")  
 			escreva("		░▒ ░       ▒   ▒▒ ░  ░   ░  ░ ░  ░   ░ ░░   ░ ▒░  ░ ▒ ▒░     ░        ░       ░ ▒ ▒░ ░░▒░ ░ ░ ░ ░░   ░ ▒░ ░ ▒  ▒  \n")  
-			escreva("		░░         ░   ▒   ░ ░   ░    ░         ░   ░ ░ ░ ░ ░ ▒    ░          ░ ░   ░ ░ ░ ▒   ░░░ ░ ░    ░   ░ ░  ░ ░  ░  \n") 
-			escreva("	  	░░	      ░   ░     ░        ░         ░     ░ ░                     ░ ░     ░             ░    ░   ░        \n\n\n")
  	}
  	//TELA MENU ↓
  	funcao tela_menu()
@@ -201,42 +216,85 @@ programa
 			escreva("    █__________________||__________________||______________||_____________█\n")
 			escreva("    █                  ||                  ||              ||             █\n")
 			escreva("    █═════════════════════════════════════════════════════════════════════█\n")
-			escreva("    █                        PARA SAIR PRESSIONE [0]                      █\n")
+			escreva("    █                     CONHECER NOSSAS ACADEMIAS [7]                   █\n")
 			escreva("    █                      PARA FINALIZAR A COMPRA [8]                    █\n")
+			escreva("    █                        PARA SAIR PRESSIONE [0]                      █\n")
 			escreva("    ███████████████████████████████████████████████████████████████████████\n")
-			escreva("\t\tEscolha uma categoria ou uma das opções acima")
+			escreva("\n\t\tEscolha uma categoria ou uma das opções acima")
 			escreva("\n\n\t\t\t\t\t\t\t CARRINHO R$:",m.arredondar(totaLucha, 2),"\n")
-			escreva("   ╔≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈╗\n")
-			escreva("   ║                                      ║\n")
-			escreva("   ║ Você conhce as acedemias MuchaLucha? ║\n")
-			escreva("   ║ Digite [7] e venha fazer parte do    ║\n")
-			escreva("   ║ nosso time.                          ║\n")
-			escreva("   ║                                      ║\n")
-			escreva("   ╚≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈╝\t\tDigite uma opção: ")
+			escreva("\t\t\t\t\t\t\t Digite uma opção: ")
 			leia(num)
 			limpa()
 		se(num == '0')
 			{
+			escreva("\n\t\t\t\t     Carregando")
+			para(init=1; init <4; init++)					
+				{											
+            		u.aguarde(0100)
+            		escreva(".")						
+           		}
+				u.aguarde(0200)
+				limpa()
 			logo()
 			}
 		se(num == '1')
 			{
+			escreva("\n\t\t\t\t     Carregando")
+			para(init=1; init <4; init++)					
+				{											
+            		u.aguarde(0100)
+            		escreva(".")						
+           		}
+				u.aguarde(0200)
+				limpa()
 			tela_lucha()
 			}
 		se(num == '2')
 			{
+			escreva("\n\t\t\t\t     Carregando")
+			para(init=1; init <4; init++)					
+				{											
+            		u.aguarde(0100)
+            		escreva(".")						
+           		}
+				u.aguarde(0200)
+				limpa()
 			tela_musc()
 			}
 		se(num == '3')
 			{
+				escreva("\n\t\t\t\t     Carregando")
+			para(init=1; init <4; init++)					
+				{											
+            		u.aguarde(0100)
+            		escreva(".")						
+           		}
+				u.aguarde(0200)
+				limpa()
 			tela_fut()
 			}
 		se(num == '8')
 			{
+				escreva("\n\t\t\t\t     Carregando")
+			para(init=1; init <4; init++)					
+				{											
+            		u.aguarde(0100)
+            		escreva(".")						
+           		}
+				u.aguarde(0200)
+				limpa()
 			tela_de_confirmacao()
 			}
           se(num == '7')
 			{
+				escreva("\n\t\t\t\t     Carregando")
+			para(init=1; init <4; init++)					
+				{											
+            		u.aguarde(0100)
+            		escreva(".")						
+           		}
+				u.aguarde(0200)
+				limpa()
 			tela_acad_mucha()
 			}
           enquanto(num != '0' e num != '1' e num != '2' ou num !='3')
@@ -265,14 +323,12 @@ programa
 		se(num == '0')
 			{
 			g.iniciar_modo_grafico(verdadeiro)
-		     g.definir_dimensoes_janela(480, 360)
-		     g.definir_titulo_janela("Loading...")
-	          g.definir_quadro_gif(mutcha,62)
-	          g.proximo_frame_gif(mutcha)
-	          g.desenhar_imagem(0,0, mutcha)
+		     g.definir_dimensoes_janela(500, 360)
+		     g.definir_titulo_janela("Disconnecting..")
+	          g.desenhar_imagem(0,0, muchalucha)
 	          g.renderizar()
 	          escreva("\t\t ...Até logo...\n")
-	          u.aguarde(1000)
+	          u.aguarde(1500)
 	          g.fechar_janela()
 			}
 
@@ -282,10 +338,10 @@ programa
 			}
 		enquanto(num != '1')
 			{
-				tela_not_found()
-				u.aguarde(2000)
+				escreva("Opção inválida.")
+				u.aguarde(0700)
 				limpa()
-				tela_menu()
+				tela_logout()
 			}
 		}
 	//CATEGORIA LUTA ↓		
@@ -963,15 +1019,14 @@ programa
 			tela_menu()
 			}
 	}
-//Academias MuchaLucha
+	//Academias MuchaLucha
 	funcao tela_acad_mucha()
 	{
-			caracter email
-		
+			cadeia email
        		escreva("    ████████████████████████████████████████████████████████████████████████████████████\n")
-			escreva("    █                                 Academias MuchaLucha                             █\n")
+			escreva("    █                                Academias MuchaLucha                              █\n")
 			escreva("    █                                                                                  █\n")
-			escreva("    █ MuchaLucha esportes de contato:               Academia Mucha Musculação:         █\n")
+			escreva("    █ MuchaLucha esportes de contato:              Academia Mucha Musculação:          █\n")
 			escreva("    █                                                                                  █\n")
 			escreva("    █ Que tal treinar na sede MuchaMucha?          Com sede também em Teresópolis,     █\n")
 			escreva("    █                                              as academias MuchaLucha contam      █\n")
@@ -982,34 +1037,47 @@ programa
 			escreva("    █                                              uma vida mais saudavél venha fazer  █\n")
 			escreva("    █                                              parte do nosso time.                █\n")
 			escreva("    █                                                                                  █\n")
-			escreva("    █                                                                                  █\n")
-			escreva("    ████████████████████████████████████████████████████████████████████████████████████\n\n\n")
+			escreva("    ████████████████████████████████████████████████████████████████████████████████████\n\n")
 			escreva("    Cadastre-se, marque uma avaliação e venha fazer parte do nosso time!\n")
-			escreva("    Digite aqui o seu endereço de e-mail: ")
+			escreva("    Digite seu endereço de e-mail ou [0] para MENU: ")
 			leia(email)
-			se(email == email){
-			escreva("\n  Parabéns! Agora você faz parte do time MuchaLucha.\n")
-			     u.aguarde(2000)
-	  			g.iniciar_modo_grafico(verdadeiro)
-				g.definir_dimensoes_janela(220, 152)
-				g.definir_titulo_janela("teste")
-				g.desenhar_imagem(0,0, muchasoco)
-				g.renderizar()
+			se(email == "0"){
 				limpa()
+				tela_menu()
+			}
+			se(email != "0")
+			{
+				limpa()
+				escreva("\n\t\t\t\t     Carregando")
+			para(init=1; init <4; init++)					
+				{											
+            		u.aguarde(0100)
+            		escreva(".")						
+           		}
+				u.aguarde(0100)
+			limpa()
+				escreva("\n\t\t Parabéns! Agora você faz parte do time MuchaLucha.\n")
+			     u.aguarde(1000)
+	  			g.iniciar_modo_grafico(verdadeiro)
+				g.definir_dimensoes_janela(500, 500)
+				g.definir_titulo_janela("\t\t\tPARABÉNS")
+				g.desenhar_imagem(0,0, cats)
+				g.renderizar()
+			limpa()
 				u.aguarde(2000)
 				g.encerrar_modo_grafico()
 			limpa()
-			tela_menu()
+				tela_menu()
 			}
-	}
+	} 
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2078; 
- * @DOBRAMENTO-CODIGO = [72, 38, 127, 131, 135, 121, 110, 146, 154, 83, 175, 188, 250, 309, 340, 373, 405, 437, 469, 474, 479, 482, 291, 529, 510, 543, 575, 606, 638, 671, 676, 680, 685, 491, 731, 712, 764, 745, 796, 778, 829, 810, 861, 875, 880, 884, 888, 694, 903, 906, 909, 912, 915, 918, 921, 924, 927, 930, 933, 937, 940, 943, 946, 953, 959, 897, 966];
+ * @POSICAO-CURSOR = 1617; 
+ * @DOBRAMENTO-CODIGO = [38, 92, 192, 203, 308, 365, 396, 429, 461, 493, 525, 530, 535, 538, 347, 585, 566, 599, 631, 662, 694, 727, 732, 736, 741, 547, 787, 768, 820, 801, 852, 834, 885, 866, 917, 931, 936, 940, 944, 750, 959, 962, 965, 968, 971, 974, 977, 980, 983, 986, 989, 993, 996, 999, 1002, 1009, 1015, 953, 1022];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
