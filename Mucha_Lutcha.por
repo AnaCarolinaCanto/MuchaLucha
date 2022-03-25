@@ -309,6 +309,7 @@ programa
 					escreva("Quantidade inválida: ")
 					u.aguarde(1000)
 					limpa()
+					tela_lucha()
 					}		
 					totaLucha = (itemtatame * qttatame) + totaLucha 
 					esttatame = esttatame - qttatame
@@ -346,7 +347,7 @@ programa
 					{
 					limpa()
 					escreva("                  Bandagem ",estbandagem," - unidades\n")
-					      escreva("   ██████████████████████████████████████████████████████\n")
+					escreva("   ██████████████████████████████████████████████████████\n")
 			          escreva("   █                                                    █\n")
 			          escreva("   █ Bandagem desenvolvida para evitar lesões no punho. █\n")
 			          escreva("   █ Fabricada em 60% poliamida e 40% poliéster.        █\n")
@@ -372,7 +373,7 @@ programa
 					{
 					limpa()
 					escreva("                  Saco de Boxe ",estsaco," - unidades\n")
-					      escreva("   ████████████████████████████████████████████████████\n")
+					escreva("   ████████████████████████████████████████████████████\n")
 			          escreva("   █                                                  █\n")
 			          escreva("   █ Saco de boxe com dimensões de 40 cm de altura,   █\n")
 			          escreva("   █ 50 cm de largura e 80 cm comprimento.            █\n")
@@ -398,7 +399,7 @@ programa
 					{
 					limpa()
 					escreva("                Protetor Bucal ",estprotetor," - unidades\n")
-				        escreva("   ██████████████████████████████████████████████████\n")
+				     escreva("   ██████████████████████████████████████████████████\n")
 			          escreva("   █                                                █\n")
 			          escreva("   █ Protetor bucal em E.V.A não tóxico moldavél,   █\n")
 			          escreva("   █ indicado para praticas de artes marciais.      █\n")
@@ -430,10 +431,9 @@ programa
 					tela_de_confirmacao()
 					}	
 					limpa()
-			se(item == "9"){
-			tela_logout()
-			}
-
+				se(item == "9"){
+					tela_logout()
+					}
 			enquanto(num != '0' e num != '1' e num != '2' ou num !='3')
 					{	
 					tela_not_found()
@@ -544,7 +544,7 @@ programa
 					{
 					limpa()
 					escreva("            Kit de Halteres ",esthalteres," - unidades\n")
-					      escreva("   █████████████████████████████████████████\n")
+					escreva("   █████████████████████████████████████████\n")
 			          escreva("   █                                       █\n")
 			          escreva("   █ Kit de Halteres Revestidos Em PVC.    █\n")
 			          escreva("   █ Par de 500g,1,2,3 e 5 Kg.             █\n")
@@ -570,7 +570,7 @@ programa
 					{
 					limpa()
 					escreva("               Whey Protein ",estwhey," - unidades\n")
-					      escreva("   ████████████████████████████████████████████████\n")
+					escreva("   ████████████████████████████████████████████████\n")
 			          escreva("   █                                              █\n")
 			          escreva("   █ Whey protein contém prteínas concentradas    █\n")
 			          escreva("   █ e blends.                                    █\n")
@@ -602,9 +602,10 @@ programa
 					{
 					tela_de_confirmacao()
 					}
-			se(item == "9"){
-			tela_logout()
-			}		
+				se(item == "9")
+					{
+					tela_logout()
+					}		
 					limpa()
 			enquanto(num != '0' e num != '1' e num != '2' ou num !='3')
 					{
@@ -652,7 +653,7 @@ programa
 					escreva("Quantidade inválida: ")
 					u.aguarde(1000)
 					limpa()
-					tela_musc()	
+					tela_fut()	
 					}
 					totaLucha = (itembola * qtbola) + totaLucha m.arredondar(totaLucha, 2)
 					totaLucha = totaLucha m.arredondar(totaLucha, 2)
@@ -679,7 +680,7 @@ programa
 					escreva("Quantidade inválida: ")
 					u.aguarde(1000)
 					limpa()
-					tela_musc()	
+					tela_fut()
 					}
 					totaLucha = (itemcamisa * qtcamisa) + totaLucha m.arredondar(totaLucha, 2)
 					totaLucha = totaLucha m.arredondar(totaLucha, 2)
@@ -705,7 +706,7 @@ programa
 					escreva("Quantidade inválida: ")
 					u.aguarde(1000)
 					limpa()
-					tela_musc()	
+					tela_fut()
 					}
 					totaLucha = (itemchuteira * qtchuteira) + totaLucha m.arredondar(totaLucha, 2)
 					totaLucha = totaLucha m.arredondar(totaLucha, 2)
@@ -732,7 +733,7 @@ programa
 					escreva("Quantidade inválida: ")
 					u.aguarde(1000)
 					limpa()
-					tela_musc()	
+					tela_fut()
 					}
 					totaLucha = (itemmeiao * qtmeiao) + totaLucha m.arredondar(totaLucha, 2)
 					totaLucha = totaLucha m.arredondar(totaLucha, 2)
@@ -758,19 +759,14 @@ programa
 					escreva("Quantidade inválida: ")
 					u.aguarde(1000)
 					limpa()
-					tela_musc()	
+					tela_fut()
 					}
 					totaLucha = (itemcaneleira * qtcaneleira) + totaLucha m.arredondar(totaLucha, 2)
 					totaLucha = totaLucha m.arredondar(totaLucha, 2)
 					estcaneleira = estcaneleira - qtcaneleira
 					limpa()
 					tela_fut()
-					}
-			senao se(item == "8")
-					{
-					limpa()
-					tela_de_confirmacao()
-					}					
+					}				
 				se(item == "0")
 					{
 					limpa()
@@ -779,24 +775,12 @@ programa
 				se(item == "8")
 					{
 					tela_de_confirmacao()
+					}
+				se(item == "9"){
+					tela_logout()
 					}			
 					limpa()
-			enquanto(item != "0" e item != "1" e item != "2" ou item !="3")
-					{	
-					tela_not_found()
-					u.aguarde(2000)
-					limpa()
-					tela_menu()
-					}
-				se(item == "8")
-					{
-					tela_de_confirmacao()
-					}
-			se(item == "9"){
-			tela_logout()
-			}			
-					limpa()
-			enquanto(item != "0" e item != "1" e item != "2" ou item !="3")
+			enquanto(item != "0" )
 					{	
 					tela_not_found()
 					u.aguarde(2000)
@@ -879,8 +863,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3080; 
- * @DOBRAMENTO-CODIGO = [51, 47, 67, 33, 152, 220, 230, 243, 247, 216, 284, 272, 296, 335, 323, 349, 387, 375, 401, 406, 411, 256, 450, 437, 476, 464, 501, 490, 527, 515, 554, 541, 568, 573, 578, 420, 616, 603, 643, 630, 657, 696, 683, 722, 710, 736, 741, 746, 751, 587, 766, 769, 772, 775, 778, 781, 784, 787, 790, 793, 796, 799, 802, 805, 808, 815, 760];
+ * @POSICAO-CURSOR = 24187; 
+ * @DOBRAMENTO-CODIGO = [25, 51, 47, 67, 33, 130, 141, 149, 78, 170, 183, 234, 275, 445, 649, 636, 676, 663, 702, 690, 729, 716, 743, 769, 774, 778, 782, 618, 791];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
