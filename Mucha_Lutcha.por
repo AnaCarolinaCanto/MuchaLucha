@@ -82,7 +82,9 @@ programa
 				limpa()
 				logico confere = falso
 				cadeia acesso, senha, tentar
+
 				const inteiro total = 7
+
 				//LOGINS ↓
 				cadeia login[total]
 				login[0] = "Rodrigo"
@@ -111,6 +113,7 @@ programa
 				se(acesso == login[i]) 
 					se(senha == codigo[i])
 						confere = verdadeiro		
+
 			se(nao confere)
 		{
 			escreva("Login ou senha inválidos\n")
@@ -132,6 +135,7 @@ programa
 			u.aguarde(0500)
 			cadastro()
 			}
+
 				}
 			} 
 			enquanto(nao confere)
@@ -255,6 +259,7 @@ programa
 	          u.aguarde(1000)
 	          g.fechar_janela()
 			}
+
 		se(num == '1')
 			{
 				cadastro()
@@ -341,7 +346,7 @@ programa
 					{
 					limpa()
 					escreva("                  Bandagem ",estbandagem," - unidades\n")
-					escreva("   ██████████████████████████████████████████████████████\n")
+					      escreva("   ██████████████████████████████████████████████████████\n")
 			          escreva("   █                                                    █\n")
 			          escreva("   █ Bandagem desenvolvida para evitar lesões no punho. █\n")
 			          escreva("   █ Fabricada em 60% poliamida e 40% poliéster.        █\n")
@@ -367,7 +372,7 @@ programa
 					{
 					limpa()
 					escreva("                  Saco de Boxe ",estsaco," - unidades\n")
-					escreva("   ████████████████████████████████████████████████████\n")
+					      escreva("   ████████████████████████████████████████████████████\n")
 			          escreva("   █                                                  █\n")
 			          escreva("   █ Saco de boxe com dimensões de 40 cm de altura,   █\n")
 			          escreva("   █ 50 cm de largura e 80 cm comprimento.            █\n")
@@ -393,7 +398,7 @@ programa
 					{
 					limpa()
 					escreva("                Protetor Bucal ",estprotetor," - unidades\n")
-				     escreva("   ██████████████████████████████████████████████████\n")
+				        escreva("   ██████████████████████████████████████████████████\n")
 			          escreva("   █                                                █\n")
 			          escreva("   █ Protetor bucal em E.V.A não tóxico moldavél,   █\n")
 			          escreva("   █ indicado para praticas de artes marciais.      █\n")
@@ -428,6 +433,7 @@ programa
 			se(item == "9"){
 			tela_logout()
 			}
+
 			enquanto(num != '0' e num != '1' e num != '2' ou num !='3')
 					{	
 					tela_not_found()
@@ -538,7 +544,7 @@ programa
 					{
 					limpa()
 					escreva("            Kit de Halteres ",esthalteres," - unidades\n")
-					escreva("   █████████████████████████████████████████\n")
+					      escreva("   █████████████████████████████████████████\n")
 			          escreva("   █                                       █\n")
 			          escreva("   █ Kit de Halteres Revestidos Em PVC.    █\n")
 			          escreva("   █ Par de 500g,1,2,3 e 5 Kg.             █\n")
@@ -564,7 +570,7 @@ programa
 					{
 					limpa()
 					escreva("               Whey Protein ",estwhey," - unidades\n")
-					escreva("   ████████████████████████████████████████████████\n")
+					      escreva("   ████████████████████████████████████████████████\n")
 			          escreva("   █                                              █\n")
 			          escreva("   █ Whey protein contém prteínas concentradas    █\n")
 			          escreva("   █ e blends.                                    █\n")
@@ -773,6 +779,18 @@ programa
 				se(item == "8")
 					{
 					tela_de_confirmacao()
+					}			
+					limpa()
+			enquanto(item != "0" e item != "1" e item != "2" ou item !="3")
+					{	
+					tela_not_found()
+					u.aguarde(2000)
+					limpa()
+					tela_menu()
+					}
+				se(item == "8")
+					{
+					tela_de_confirmacao()
 					}
 			se(item == "9"){
 			tela_logout()
@@ -826,6 +844,7 @@ programa
 			se(qtbola >= 1){
 			escreva("      Bola - ",qtbola," ----------------- R$ ",itembola,"\n")
 			}
+
 			se(qtcamisa >= 1){
 			escreva("      Camisa - ",qtcamisa," --------------- R$ ",itemcamisa,"\n")
 			}
@@ -860,8 +879,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4272; 
- * @DOBRAMENTO-CODIGO = [51, 47, 67, 33, 166, 179, 234, 244, 257, 261, 230, 300, 288, 312, 351, 339, 365, 403, 391, 417, 422, 427, 430, 270, 471, 458, 497, 485, 522, 511, 548, 536, 575, 562, 589, 594, 598, 602, 439, 642, 629, 669, 656, 683, 722, 709, 748, 736, 762, 767, 772, 776, 780, 611, 795, 798, 801, 804, 807, 810, 813, 816, 819, 822, 825, 828, 831, 834, 837, 844, 789];
+ * @POSICAO-CURSOR = 3080; 
+ * @DOBRAMENTO-CODIGO = [51, 47, 67, 33, 152, 220, 230, 243, 247, 216, 284, 272, 296, 335, 323, 349, 387, 375, 401, 406, 411, 256, 450, 437, 476, 464, 501, 490, 527, 515, 554, 541, 568, 573, 578, 420, 616, 603, 643, 630, 657, 696, 683, 722, 710, 736, 741, 746, 751, 587, 766, 769, 772, 775, 778, 781, 784, 787, 790, 793, 796, 799, 802, 805, 808, 815, 760];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
