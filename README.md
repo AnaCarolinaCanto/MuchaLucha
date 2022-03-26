@@ -1,8 +1,12 @@
 # MuchaLucha
 Projeto Serratec
 
-A loja de materiais esportivos Mucha Lucha foi fundada em marÁo de 2022 por 6 alunos residentes do Serratec, Leonardo Chermaut, Thais Quesada, Douglas Silva, Ana Carolina Canto, Rodrigo Ribeiro e Matheus Ritchielle.
-Trata-se de empreendimento do ramo varejista, cujo sucesso se deve ‡ grande procura dos consumidores por materiais de lucha, musculaÁ„o e futebol. S„o diversas promoÁıes disponÌveis! 
-Os principais produtos vendidos s„o: Tatame, Luva, Bandagem, Saco de Boxe, Protetor Bucal, Cintur„o, Colchonete, Corda, Kit de Halteres, Whey Protein, Bola, Camisa, Chuteira, Mei„o e Caneleira. 
-… muito f·cil fazer a sua compra, venha nos conhecer!
+A loja de materiais esportivos Mucha Lucha foi fundada em mar√ßo de 2022 por 6 alunos residentes do Serratec, Leonardo Chermaut, Thais Quesada, Douglas Silva, Ana Carolina Canto, Rodrigo Ribeiro e Matheus Ritchielle.
+
+Trata-se de empreendimento do ramo varejista, cujo sucesso se deve √† grande procura dos consumidores por materiais de lucha, muscula√ß√£o e futebol. S√£o diversas promo√ß√µes dispon√≠veis! 
+
+Os principais produtos vendidos s√£o: Tatame, Luva, Bandagem, Saco de Boxe, Protetor Bucal, Cintur√£o, Colchonete, Corda, Kit de Halteres, Whey Protein, Bola, Camisa, Chuteira, Mei√£o e Caneleira. 
+
+√â muito f√°cil fazer a sua compra, venha nos conhecer!
+
 A rede atua em omnichannel.

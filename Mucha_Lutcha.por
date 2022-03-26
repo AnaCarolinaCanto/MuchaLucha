@@ -15,6 +15,7 @@ programa
 			   qtcinturao, qtcolchonete, qtcorda, qthalteres, qtwhey,//multiplicadores
 			   init, qtbola, qtcamisa, qtchuteira, qtmeiao, qtcaneleira//multiplicadores
 		//CARREGAR GIF ↓
+
 		inteiro mutcha = g.carregar_imagem("mutcha.GIF"), whey =g.carregar_imagem("whey.gif"), saco = g.carregar_imagem("saco.gif"), protetor =g.carregar_imagem("protetor.gif"), meiao = g.carregar_imagem("meiao.gif"),
 			halteres =g.carregar_imagem("halteres.gif"), luva = g.carregar_imagem("luva.gif"),corda =g.carregar_imagem("corda.gif"), colchonete = g.carregar_imagem("colchonete.gif"),	
 			cinturao =g.carregar_imagem("cinturao.gif"), chuteira = g.carregar_imagem("chuteira.gif"),caneleira =g.carregar_imagem("caneleira.gif"), camisa = g.carregar_imagem("camisa.gif"),
@@ -135,10 +136,12 @@ programa
                u.aguarde(0200)
                limpa()
 
+
 		se (nao confere){
                 escreva("Login ou senha inválidos\n")
                 escreva("Tentar novamente? S ou N: ")
                 leia(tentar)
+
 
           se (tentar == "S" ou tentar == "s"){
 			cadastro()
@@ -187,6 +190,7 @@ programa
 	//TELA DE NÃO ENCONTRADA ↓
 	funcao tela_not_found()
  	{
+
 			escreva("	▓██▓███   ▄▄▄        ▄████ ▓█████     ███▄    █  ▒█████  ▄▄▄█████▓     █████▒▒█████   █    ██  ███▄    █ ▓█████▄  \n")  
 			escreva("	▓██░  ██▒▒████▄     ██▒ ▀█▒▓█   ▀     ██ ▀█   █ ▒██▒  ██▒▓  ██▒ ▓▒   ▓██   ▒▒██▒  ██▒ ██  ▓██▒ ██ ▀█   █ ▒██▀ ██▌ \n")
 			escreva("	▓██░ ██▓▒▒██  ▀█▄  ▒██░▄▄▄░▒███      ▓██  ▀█ ██▒▒██░  ██▒▒ ▓██░ ▒░   ▒████ ░▒██░  ██▒▓██  ▒██░▓██  ▀█ ██▒░██   █▌ \n")
@@ -194,6 +198,7 @@ programa
 			escreva("	▒██▒ ░  ░ ▓█   ▓██▒░▒▓███▀▒░▒████▒   ▒██░   ▓██░░ ████▓▒░  ▒██▒ ░    ░▒█░   ░ ████▓▒░▒▒█████▓ ▒██░   ▓██░░▒████▓  \n")  
 			escreva("	▒▓▒░ ░  ░ ▒▒   ▓▒█░ ░▒   ▒ ░░ ▒░ ░   ░ ▒░   ▒ ▒ ░ ▒░▒░▒░   ▒ ░░       ▒ ░   ░ ▒░▒░▒░ ░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒  ▒▒▓  ▒  \n")  
 			escreva("	░▒ ░       ▒   ▒▒ ░  ░   ░  ░ ░  ░   ░ ░░   ░ ▒░  ░ ▒ ▒░     ░        ░       ░ ▒ ▒░ ░░▒░ ░ ░ ░ ░░   ░ ▒░ ░ ▒  ▒  \n")  
+
  	}
  	//TELA MENU ↓
  	funcao tela_menu()
@@ -230,6 +235,7 @@ programa
           }
 			u.aguarde(0200)
 			limpa()
+
 			logo()
 		}
 		se (num == '1'){
@@ -294,6 +300,7 @@ programa
 			limpa()
 			tela_menu()
 		}
+
 	}
 	//TELA DESCONEXÃO ↓		
 	funcao tela_logout()
@@ -350,6 +357,7 @@ programa
 			escreva("    ████████████████████████████████████████████████████████████████████████████████████████████████████\n")
 			escreva("\t\t\t\t        Se interessou nestes itens? \n\n\t\t                 ↑ Digite um Item ou uma das Opções acima ↑\n")
 			escreva("\n\t\t\t\t\t\t\t                             CARRINHO R$:",m.arredondar(totaLucha, 2),"\n\t\t\t\t\t\t\t                            Digite uma opção: ")			leia(item)
+
 		se(item == "1"){
 			limpa()
 			escreva("                     Tatame ",esttatame," - unidades\n")
@@ -390,6 +398,7 @@ programa
 			escreva("   █                                               █\n")
 			escreva("   █████████████████████████████████████████████████\n\n")
 			escreva("   Escolha a quantidade: ")
+
 					g.iniciar_modo_grafico(verdadeiro)
 					g.definir_dimensoes_janela(480, 360)
 					g.definir_titulo_janela("Luva")
@@ -420,6 +429,7 @@ programa
 			escreva("   █                                                    █\n")
 			escreva("   ██████████████████████████████████████████████████████\n\n")
 			escreva("   Escolha a quantidade: ")
+
 					g.iniciar_modo_grafico(verdadeiro)
 					g.definir_dimensoes_janela(480, 360)
 					g.definir_titulo_janela("Luva")
@@ -480,6 +490,7 @@ programa
 			escreva("   █                                                █\n")
 			escreva("   ██████████████████████████████████████████████████\n\n")
 			escreva("   Escolha a quantidade: ")
+
 					g.iniciar_modo_grafico(verdadeiro)
 					g.definir_dimensoes_janela(480, 360)
 					g.definir_titulo_janela("Luva")
@@ -557,8 +568,7 @@ programa
 					g.renderizar()
 					leia(qtcinturao)
 					g.encerrar_modo_grafico()
-					
-			enquanto(qtcinturao > estcinturao){
+				enquanto(qtcinturao > estcinturao){
 					limpa()
 					escreva("Quantidade inválida: ")
 					u.aguarde(1000)
@@ -581,6 +591,7 @@ programa
 			escreva("   █                                    █\n")
 			escreva("   ██████████████████████████████████████\n\n")
 			escreva("   Escolha a quantidade: ")
+
 					g.iniciar_modo_grafico(verdadeiro)
 					g.definir_dimensoes_janela(480, 360)
 					g.definir_titulo_janela("Colchonete")
@@ -588,7 +599,6 @@ programa
 					g.renderizar()
 					leia(qtcolchonete)
 					g.encerrar_modo_grafico()
-			
 			enquanto (qtcolchonete > estcolchonete){
 					limpa()
 					escreva("Quantidade inválida: ")
@@ -602,7 +612,6 @@ programa
 					limpa()
 					tela_musc()
 					}
-		
 		senao se (item == "3"){
 				limpa()
 				escreva("                   Corda ",estcorda," - unidades\n")
@@ -612,6 +621,7 @@ programa
 			     escreva("   █                                                   █\n")
 			     escreva("   █████████████████████████████████████████████████████\n\n")
 				escreva("   Esccolha a quantidade: ")
+
 					g.iniciar_modo_grafico(verdadeiro)
 					g.definir_dimensoes_janela(480, 360)
 					g.definir_titulo_janela("Corda")
@@ -619,8 +629,10 @@ programa
 					g.renderizar()
 					leia(qtcorda)
 					g.encerrar_modo_grafico()
+
 			
 			enquanto (qtcorda > estcorda){
+
 					limpa()
 					escreva("Quantidade inválida: ")
 					u.aguarde(1000)
@@ -643,6 +655,7 @@ programa
 			     escreva("   █                                       █\n")
 			     escreva("   █████████████████████████████████████████\n\n")
 				escreva("   Esccolha a quantidade: ")
+
 					g.iniciar_modo_grafico(verdadeiro)
 					g.definir_dimensoes_janela(480, 360)
 					g.definir_titulo_janela("halteres")
@@ -650,8 +663,9 @@ programa
 					g.renderizar()
 					leia(qthalteres)
 					g.encerrar_modo_grafico()
-				
+			
 				enquanto (qthalteres > esthalteres){
+
 					limpa()
 					escreva("Quantidade inválida: ")
 					u.aguarde(1000)
@@ -664,6 +678,7 @@ programa
 					limpa()
 					tela_musc()
 					}
+
 		senao se (item == "5"){
 				limpa()
 				escreva("               Whey Protein ",estwhey," - unidades\n")
@@ -682,7 +697,9 @@ programa
 					g.renderizar()
 					leia(qtwhey)
 					g.encerrar_modo_grafico()
+
 			enquanto (qtwhey > estwhey){
+
 					limpa()
 					escreva("Quantidade inválida: ")
 					u.aguarde(1000)
@@ -733,7 +750,6 @@ programa
 			escreva("\t\t\t\t        Se interessou nestes itens? \n\n\t\t                 ↑ Digite um Item ou uma das Opções acima ↑\n")
 			escreva("\n\t\t\t\t\t\t\t                             CARRINHO R$:",m.arredondar(totaLucha, 2), "\n\t\t\t\t\t\t\t                            Digite uma opção: ")
 			leia(item)
-		
 		se (item == "1"){
 			limpa()
 			escreva("                 Bola ",estbola," - unidades\n")
@@ -745,6 +761,7 @@ programa
 			escreva("   █                                           █\n")
 			escreva("   █████████████████████████████████████████████\n\n")
 			escreva("   Escolha a quantidade: ")
+
 					g.iniciar_modo_grafico(verdadeiro)
 					g.definir_dimensoes_janela(480, 480)
 					g.definir_titulo_janela("Bola")
@@ -752,7 +769,7 @@ programa
 					g.renderizar()
 					leia(qtbola)
 					g.encerrar_modo_grafico()
-			
+		
 			enquanto (qtbola > estbola){
 					limpa()
 					escreva("Quantidade inválida: ")
@@ -766,8 +783,7 @@ programa
 					limpa()
 					tela_fut()
 				}
-				
-		senao se (item == "2"){
+				senao se (item == "2"){
 				limpa()
 				escreva("                   Camisa ",estcamisa," - unidades\n")
 				escreva("   █████████████████████████████████████████████████\n")
@@ -778,6 +794,7 @@ programa
 			     escreva("   █                                               █\n")
 			     escreva("   █████████████████████████████████████████████████\n\n")
 				escreva("   Escolha a quantidade: ")
+
 					g.iniciar_modo_grafico(verdadeiro)
 					g.definir_dimensoes_janela(480, 480)
 					g.definir_titulo_janela("camisa")
@@ -815,7 +832,6 @@ programa
 					g.renderizar()
 					leia(qtchuteira)
 					g.encerrar_modo_grafico()
-			
 			enquanto (qtchuteira > estchuteira){
 					limpa()
 					escreva("Quantidade inválida: ")
@@ -854,7 +870,7 @@ programa
 					limpa()
 					tela_fut()
 			}
-					totaLucha = (itemmeiao * qtmeiao) + totaLucha m.arredondar(totaLucha, 2)
+ 				  totaLucha = (itemmeiao * qtmeiao) + totaLucha m.arredondar(totaLucha, 2)
 					totaLucha = totaLucha m.arredondar(totaLucha, 2)
 					estmeiao = estmeiao - qtmeiao
 					limpa()
@@ -877,8 +893,7 @@ programa
 					g.renderizar()
 					leia(qtcaneleira)
 					g.encerrar_modo_grafico()
-			
-			enquanto (qtcaneleira > estcaneleira){
+				enquanto (qtcaneleira > estcaneleira){
 					limpa()
 					escreva("Quantidade inválida: ")
 					u.aguarde(1000)
@@ -1042,15 +1057,65 @@ programa
 			limpa()
 				tela_menu()
 			}
+	}
+	//Academias MuchaLucha
+	funcao tela_acad_mucha()
+	{
+			cadeia email
+       		escreva("    ████████████████████████████████████████████████████████████████████████████████████\n")
+			escreva("    █                                Academias MuchaLucha                              █\n")
+			escreva("    █                                                                                  █\n")
+			escreva("    █ MuchaLucha esportes de contato:              Academia Mucha Musculação:          █\n")
+			escreva("    █                                                                                  █\n")
+			escreva("    █ Que tal treinar na sede MuchaMucha?          Com sede também em Teresópolis,     █\n")
+			escreva("    █                                              as academias MuchaLucha contam      █\n")
+			escreva("    █ Nossa academia-sede, em Teresópolis,         com os melhores e mais modernos     █\n")
+			escreva("    █ Rio de Janeiro, oferece aulas de             equipamentos.                       █\n")
+			escreva("    █ Jiu-Jitsu, Boxe e Defesa pessoal.            Se o seu objetivo é conquistar um   █\n")
+			escreva("    █                                              corpo mais forte, resistente, e     █\n")
+			escreva("    █                                              uma vida mais saudavél venha fazer  █\n")
+			escreva("    █                                              parte do nosso time.                █\n")
+			escreva("    █                                                                                  █\n")
+			escreva("    ████████████████████████████████████████████████████████████████████████████████████\n\n")
+			escreva("    Cadastre-se, marque uma avaliação e venha fazer parte do nosso time!\n")
+			escreva("    Digite seu endereço de e-mail ou [0] para MENU: ")
+			leia(email)
+			se(email == "0"){
+				limpa()
+				tela_menu()
+			}
+			se(email != "0")
+			{
+				limpa()
+				escreva("\n\t\t\t\t     Carregando")
+			para(init=1; init <4; init++)					
+				{											
+            		u.aguarde(0100)
+            		escreva(".")						
+           		}
+				u.aguarde(0100)
+			limpa()
+				escreva("\n\t\t Parabéns! Agora você faz parte do time MuchaLucha.\n")
+			     u.aguarde(1000)
+	  			g.iniciar_modo_grafico(verdadeiro)
+				g.definir_dimensoes_janela(500, 500)
+				g.definir_titulo_janela("\t\t\tPARABÉNS")
+				g.desenhar_imagem(0,0, cats)
+				g.renderizar()
+			limpa()
+				u.aguarde(2000)
+				g.encerrar_modo_grafico()
+			limpa()
+				tela_menu()
+			}
 	} 
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 40372; 
- * @DOBRAMENTO-CODIGO = [187, 302, 312, 298, 523];
+ * @POSICAO-CURSOR = 1171; 
+ * @DOBRAMENTO-CODIGO = [38, 92, 192, 203, 308, 365, 396, 429, 461, 493, 525, 530, 535, 538, 347, 585, 566, 599, 631, 662, 694, 727, 732, 736, 741, 547, 787, 768, 820, 801, 852, 834, 885, 866, 917, 931, 936, 940, 944, 750, 959, 962, 965, 968, 971, 974, 977, 980, 983, 986, 989, 993, 996, 999, 1002, 1009, 1015, 953, 1022];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
